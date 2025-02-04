@@ -18,16 +18,35 @@ let m_showInnerTimer;
 let m_logo_url = "";
 let m_curr_admin = 1;
 
-function setInit() {
-    
+let m_curr_page = "";
+let m_clickable = true;
 
+function setInit() {
+
+    /*
     $(".cup_img").on("touchstart mousedown", function (e) {
         e.preventDefault();
         onClickCup(this);        
     });
-    
-    
-    
+    */
+
+    $(".page_00 .cup_zone").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        onClickCup(this);
+    });
+
+    $(".page_10 .main_menu").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        onClickMainMenu(this);
+    });
+
+    $(".home_btn").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        onClickHomeBtn(this);
+    });
+
+
+
     m_time_last = new Date().getTime();
     setInterval(setMainInterval, 1000);
     setLoadSetting("include/setting.json");
@@ -74,7 +93,7 @@ function setContents() {
     $.ajax({
         url: t_url,
         dataType: 'json',
-        success: function (data) {            
+        success: function (data) {
             setInitSetting();
             setTimeout(setHideCover, 500);
         },
@@ -95,28 +114,152 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    //m_curr_page = ".page_00";
+    setPage("00");
 }
 
-
-function onClickCup(_obj){
-    $(_obj).addClass("pause").animate({ top: "-=100px", left:"+=100px", opacity: 0 }, 3000);
+function setMainReset(){
+    m_clickable = true;
+    
+    $(".page_00 .cup_img").removeClass("pause").animate({
+        top: "+=50px",
+        left: "-=100px",
+        opacity: 1
+    }, 0);
+    $(".page_00 .cup_wave").show();
+    $(".page_00 .cup_txt").show();
+    
+    
+    $(".page_10 .cup_img").removeClass("pause").animate({
+        top: "+=50px",
+        left: "+=30px",
+        opacity: 1
+    }, 0);
+    $(".page_10 .cup_wave").show();
+    
+    
+    
+    setPage("00");
 }
 
+function onClickHomeBtn(_obj){
+    if(m_clickable == false){
+        return;
+    }
+    m_clickable = false;
+    setMainReset();
+}
 
+function onClickCup(_obj) {
+    if(m_clickable == false){
+        return;
+    }
+    m_clickable = false;
+    //$(_obj).addClass("pause").animate({ top: "-=100px", left:"+=100px", opacity: 0 }, 3000);
+    $(".page_00 .cup_img").addClass("pause").animate({
+        top: "-=50px",
+        left: "+=100px",
+        opacity: 0
+    }, 2000);
+    $(".page_00 .cup_wave").fadeOut();
+    $(".page_00 .cup_txt").fadeOut();
 
+    setTimeout(setPage, 1500, "10");
+}
 
+function onClickMainMenu(_obj){
+    if(m_clickable == false){
+        return;
+    }
+    m_clickable = false;
+    let t_code = $(_obj).attr('code');
+    //setPage("2"+t_code);
+    $(".page_10 .cup_img").addClass("pause").animate({
+        top: "-=50px",
+        left: "-=30px",
+        opacity: 0
+    }, 2000);
+    $(".page_10 .cup_wave").fadeOut();
+    
 
+    setTimeout(setPage, 1500, "2"+t_code);
+    
+}
 
+function setPage(_code) {
+    console.log('index setPage', _code);
+    switch (_code) {
+        case "00":
+            setSwap(m_curr_page, ".page_00");
+            break;
+        case "10":
+            setSwap(m_curr_page, ".page_10");
+            break;
+        case "20":
+            $("#id_title_0").html("전통다도 여행");
+            $("#id_title_1").html("하동의 전통적 다실 방문 코스");
+            setSwap(m_curr_page, ".page_20");
+            setCate(_code);
+            break;
+        case "21":
+            $("#id_title_0").html("자연 속 힐링<br>다실 여행");
+            $("#id_title_1").html("지리산 풍경과 섬진강이 어우러진<br>자연 풍경 속다실 코스");
+            setSwap(m_curr_page, ".page_20");
+            setCate(_code);
+            break;
+        case "22":
+            $("#id_title_0").html("현대 감각 다실<br>여행");
+            $("#id_title_1").html("젊은 감각의 현대적 다실 코스");
+            setSwap(m_curr_page, ".page_20");
+            setCate(_code);
+            break;
+        case "23":
+            $("#id_title_0").html("다실에서 머무는<br>휴식 여행");
+            $("#id_title_1").html("여유를 즐기며 다숙이 가능한 다실 코스");
+            setSwap(m_curr_page, ".page_20");
+            setCate(_code);
+            break;
+    }
+}
 
+function setCate(_code){
+    $(".cate_00").hide();
+    $(".cate_01").hide();
+    $(".cate_02").hide();
+    $(".cate_03").hide();
+    switch (_code) {
+        case "20":
+            $(".cate_00").show();
+            break;
+        case "21":
+            $(".cate_01").show();
+            break;
+        case "22":
+            $(".cate_02").show();
+            break;
+        case "23":
+            $(".cate_03").show();
+            break;
+    }
+}
 
+function setSwap(_hide, _show) {
+    m_curr_page = _show;
+    $(_show).css("z-index", "100");
+    $(_show).fadeIn(1000);
+    console.log(_hide);
+    if (_hide != "") {
+        $(_hide).css("z-index", "90");
+        setTimeout(setHide, 1000, _hide);
+    }else{
+        m_clickable = true;        
+    }
+}
 
-
-
-
-
-
-
-
+function setHide(_hide) {
+    m_clickable = true;
+    $(_hide).hide();
+}
 
 
 
@@ -140,10 +283,6 @@ function getVideoCode(_code) {
             return m_main_video_list[i];
         }
     }
-}
-
-function setMainReset() {
-    console.log("setMainReset");
 }
 
 function convMainVideoList(_list) {
@@ -289,7 +428,7 @@ function setVideoStart() {
     //"START"
     setAllVideoMute();
     setAllVideoPause();
-    setTimeout(setOthersVideoClear,500);
+    setTimeout(setOthersVideoClear, 500);
     m_curr_video_zone = null;
     let t_video_zone = null;
     let t_video = null;
@@ -419,6 +558,7 @@ function setAllVideoPause() {
         video.pause();
     });
 }
+
 function setAllVideoClear() {
     console.log("setAllVideoClear");
     let videos = $("video");
@@ -471,7 +611,7 @@ function setAdminVideoPlay(_code) {
     if (getAdminVideoCode(_code) == undefined) {
         return;
     }
-    
+
     var str_show = '',
         str_hide = '';
 
@@ -507,7 +647,7 @@ function setAdminVideoPlay(_code) {
     if (m_main_video_list.length > 0) {
         setAllVideoMute();
         setAllVideoPause();
-        setTimeout(setMainVideoClear,500);
+        setTimeout(setMainVideoClear, 500);
         //setAllMainVideoRemove();
     }
 
