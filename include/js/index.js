@@ -54,7 +54,10 @@ function setInit() {
         onClickPopupBtn(this);
     });
 
-
+    $("html").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        setTouched();
+    });
 
     m_time_last = new Date().getTime();
     setInterval(setMainInterval, 1000);
@@ -86,7 +89,9 @@ function setMainInterval() {
     time_gap = time_curr - m_time_last;
     time_gap = Math.floor(time_gap / 1000);
     if (time_gap > 180) {
-        //setMainReset();
+        if ($(".page_00").css("display") == "none") {
+            setMainReset();
+        }
     }
 
     m_status_time_chk += 1;
@@ -95,6 +100,11 @@ function setMainInterval() {
         setCallWebToApp('STATUS', 'STATUS');
     }
 }
+
+function setTouched() {
+    m_time_last = new Date().getTime();
+}
+
 
 //kiosk_contents를 읽기
 function setContents() {
@@ -211,7 +221,8 @@ function onClickHomeBtn(_obj) {
         return;
     }
     m_clickable = false;
-    setMainReset();
+    //setMainReset();
+    setPage("10");
 }
 
 function onClickPopupBtn(_obj) {
@@ -279,6 +290,15 @@ function setPage(_code) {
             setSwap(m_curr_page, ".page_00");
             break;
         case "10":
+
+            $(".page_10 .cup_img").removeClass("pause").animate({
+                top: "+=30px",
+                left: "+=10px",
+                opacity: 1
+            }, 0);
+            $(".page_10 .cup_wave").show();
+            
+            
             setSwap(m_curr_page, ".page_10");
             break;
         case "20":
@@ -353,7 +373,7 @@ function setSwap(_hide, _show) {
             ease: "power2.out"
         });
     }
-    console.log(_hide);
+    //console.log(_hide);
     if (_hide != "") {
         $(_hide).css("z-index", "90");
         setTimeout(setHide, 1000, _hide);
