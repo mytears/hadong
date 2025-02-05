@@ -153,20 +153,18 @@ function setInitSetting() {
 function setMainReset() {
     m_clickable = true;
 
-    $(".page_00 .cup_img").removeClass("pause").animate({
-        top: "+=10px",
-        left: "-=20px",
-        opacity: 1
-    }, 0);
+    $(".page_00 .cup_img").removeClass("pause");
+    $(".page_00 .cup_img").css("opacity","1");
+    $(".page_00 .cup_img").css("top","740px");
+    $(".page_00 .cup_img").css("left","720px");
     $(".page_00 .cup_wave").show();
     $(".page_00 .cup_txt").show();
 
 
-    $(".page_10 .cup_img").removeClass("pause").animate({
-        top: "+=30px",
-        left: "+=10px",
-        opacity: 1
-    }, 0);
+    $(".page_10 .cup_img").removeClass("pause");
+    $(".page_10 .cup_img").css("opacity","1");
+    $(".page_10 .cup_img").css("top","620px");
+    $(".page_10 .cup_img").css("left","700px");
     $(".page_10 .cup_wave").show();
 
 
@@ -213,7 +211,7 @@ function setShowPopup(_cate, _num) {
 
 function setHidePopup() {
     m_clickable = true;
-    $(".popup_page").hide();
+    $(".popup_page").fadeOut();
 }
 
 function onClickHomeBtn(_obj) {
@@ -266,7 +264,6 @@ function onClickCup(_obj) {
 function onClickMainMenu(_obj) {
     if (m_clickable == false) {
         return;
-        ``
     }
     m_clickable = false;
     let t_code = $(_obj).attr('code');
@@ -290,12 +287,10 @@ function setPage(_code) {
             setSwap(m_curr_page, ".page_00");
             break;
         case "10":
-
-            $(".page_10 .cup_img").removeClass("pause").animate({
-                top: "+=30px",
-                left: "+=10px",
-                opacity: 1
-            }, 0);
+            $(".page_10 .cup_img").removeClass("pause");
+            $(".page_10 .cup_img").css("opacity","1");
+            $(".page_10 .cup_img").css("top","620px");
+            $(".page_10 .cup_img").css("left","700px");
             $(".page_10 .cup_wave").show();
             
             

@@ -138,8 +138,8 @@
 }
 
 .page_10 .cup_wave {
-    top: 810px;
-    left: 725px;
+    top: 780px;
+    left: 720px;
 }
 
 .page_00 .cup_img {
@@ -648,13 +648,19 @@
 
 .popup_page .popup_bg {
     position: absolute;
-    top: 7px;
-    left: 7px;
+    top: 6px;
+    left: 6px;
     width: 1196px;
     height: 870px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+    background: #FDFCFC 0% 0% no-repeat padding-box;
     border: 2px solid #9F8F73;
     opacity: 0.9;
+}
+
+.popup_page .popup_bg img{
+    position: absolute;
+    right: 0px;
+    
 }
 
 .popup_page .black_bg {
