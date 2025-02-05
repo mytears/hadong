@@ -1,147 +1,205 @@
 {
     "header": {
-        "logo_url": "commonfiles/logo/logo.png"
+        "touch_sound": "commonfiles/sounds/touch_sound_01.mp3"
     },
-	"notice_list":[
+	"contents_list":[
 		{
-            "id": "0",
-            "sort": "0",
-            "type": "MOV",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 60,
-			"file_url": "commonfiles/notice/video_01.mp4"
+			"cate":0,
+			"code":0,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.차문화 행사를 주최하고, ",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "1",
-            "sort": "1",
-            "type": "IMG",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 10,
-			"file_url": "commonfiles/notice/img_01.jpg"
+			"cate":0,
+			"code":1,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "2",
-            "sort": "2",
-            "type": "MOV",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 60,
-			"file_url": "commonfiles/notice/video_02.mp4"
+			"cate":0,
+			"code":2,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "3",
-            "sort": "3",
-            "type": "IMG",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 10,
-			"file_url": "commonfiles/notice/img_02.jpg"
+			"cate":0,
+			"code":3,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
+		},
+		
+		
+		{
+			"cate":1,
+			"code":0,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "4",
-            "sort": "4",
-            "type": "MOV",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 60,
-			"file_url": "commonfiles/notice/video_03.mp4"
+			"cate":1,
+			"code":1,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "5",
-            "sort": "5",
-            "type": "IMG",
-            "sday": "20241029",
-            "eday": "20261029",
-            "stime": "0000",
-            "etime": "2355",
-            "ptime": 10,
-			"file_url": "commonfiles/notice/img_03.jpg"
-		}
-	],
-	"main_video_list":[
-		{
-            "id": "22",
-            "code": "0",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/contents/test_01.mp4"
+			"cate":1,
+			"code":2,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "1",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/contents/test_02.mp4"
+			"cate":1,
+			"code":3,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
+		},
+		
+		
+		{
+			"cate":2,
+			"code":0,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "2",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/contents/test_03.mp4"
+			"cate":2,
+			"code":1,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "3",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/contents/test_04.mp4"
+			"cate":2,
+			"code":2,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "4",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/contents/test_05.mp4"
-		}
-	],
-	"admin_video_list":[
+			"cate":2,
+			"code":3,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
+		},
+		
+		
 		{
-            "id": "22",
-            "code": "0",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/admin/admin_01.mp4"
+			"cate":3,
+			"code":0,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "1",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/admin/admin_02.mp4"
+			"cate":3,
+			"code":1,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "2",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/admin/admin_03.mp4"
+			"cate":3,
+			"code":2,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		},
 		{
-            "id": "22",
-            "code": "3",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/admin/admin_04.mp4"
-		},
-		{
-            "id": "22",
-            "code": "4",
-            "type": "MOV",
-            "ptime": 60,
-			"file_url": "commonfiles/admin/admin_05.mp4"
+			"cate":3,
+			"code":3,
+			"name":"대렴차문화원",
+			"desc":"차문화 행사를 주최하고, 차 관련 연구를 진행하는 다실입니다.",
+			"address":"경남 하동군 하동읍 섬진강대로 2764-1",
+			"tel":"010-0000-0000",
+			"programs":"차담",
+			"main_img_url":"commonfiles/images/img_1_1.png",
+			"sub_img_url":"commonfiles/images/img_1_2.png",
+			"qr_img_url":"commonfiles/images/img_1_3.png"
 		}
 	]
 }
