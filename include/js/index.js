@@ -270,14 +270,14 @@ function onClickCup(_obj) {
     m_clickable = false;
     //$(_obj).addClass("pause").animate({ top: "-=100px", left:"+=100px", opacity: 0 }, 3000);
     $(".page_00 .cup_img").addClass("pause").animate({
-        top: "-=10px",
-        left: "+=20px",
+        top: "-=60px",
+        left: "+=130px",
         opacity: 0
-    }, 500);
+    }, 1500);
     $(".page_00 .cup_wave").fadeOut();
     $(".page_00 .cup_txt").fadeOut();
 
-    setTimeout(setPage, 250, "10");
+    setTimeout(setPage, 1000, "10");
 }
 
 function onClickMainMenu(_obj) {
@@ -288,14 +288,14 @@ function onClickMainMenu(_obj) {
     let t_code = $(_obj).attr('code');
     //setPage("2"+t_code);
     $(".page_10 .cup_img").addClass("pause").animate({
-        top: "-=30px",
-        left: "-=10px",
+        top: "-=60px",
+        left: "-=40px",
         opacity: 0
-    }, 500);
+    }, 1500);
     $(".page_10 .cup_wave").fadeOut();
 
 
-    setTimeout(setPage, 250, "2" + t_code);
+    setTimeout(setPage, 1000, "2" + t_code);
 
 }
 
