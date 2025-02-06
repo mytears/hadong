@@ -153,6 +153,9 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    $("#id_over_0").hide();
+    $("#id_over_1").hide();
+    
     $(".popup_page").hide();
     $(".page_20").hide();
     $(".page_10").hide();
@@ -342,6 +345,8 @@ function setPage(_code) {
 function setCate(_code) {
 
     let t_show = "";
+    $("#id_over_0").hide();
+    $("#id_over_1").hide();
 
     $(".cate_00").hide();
     $(".cate_01").hide();
@@ -349,15 +354,19 @@ function setCate(_code) {
     $(".cate_03").hide();
     switch (_code) {
         case "20":
+            $("#id_over_0").show();
             t_show = ".cate_00";
             break;
         case "21":
+            $("#id_over_0").show();
             t_show = ".cate_01";
             break;
         case "22":
+            $("#id_over_1").show();
             t_show = ".cate_02";
             break;
         case "23":
+            $("#id_over_0").show();
             t_show = ".cate_03";
             break;
     }
