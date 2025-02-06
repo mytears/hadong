@@ -19,6 +19,8 @@ let m_curr_admin = 1;
 
 let m_curr_page = "";
 let m_clickable = true;
+let m_curr_playing = null;
+let m_sound_volume = 1.0;
 
 function setInit() {
 
@@ -57,12 +59,17 @@ function setInit() {
     $("html").on("touchstart mousedown", function (e) {
         e.preventDefault();
         setTouched();
+        setTouchSoundPlay();
     });
 
     m_time_last = new Date().getTime();
     setInterval(setMainInterval, 1000);
     setLoadSetting("include/setting.json");
     setInitFsCommand();
+}
+
+function setTouchSoundPlay(){
+    setSoundPlay(m_header.touch_sound);
 }
 
 function setLoadSetting(_url) {
@@ -116,13 +123,13 @@ function setContents() {
             m_header = data.header;
             m_contents_list = convCate(data.contents_list);
             //            setShowPopup(0, 0);
+            //setTimeout(setHideCover, 500);
             setInitSetting();
-            setTimeout(setHideCover, 500);
         },
         error: function (xhr, status, error) {
             console.error('컨텐츠 에러 발생:', status, error);
             setInitSetting();
-            setTimeout(setHideCover, 500);
+            //setTimeout(setHideCover, 500);
         },
     });
 }
@@ -146,6 +153,15 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    $(".popup_page").hide();
+    $(".page_20").hide();
+    $(".page_10").hide();
+    $(".cate_00").hide();
+    $(".cate_01").hide();
+    $(".cate_02").hide();
+    $(".cate_03").hide();
+    
+    setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
     setPage("00");
 }
@@ -204,7 +220,7 @@ function setShowPopup(_cate, _num) {
         top: "201px",
         duration: 0.5,
         opacity: 1,
-        ease: "power2.out"
+        ease: "back.out"
     });
 
 }
@@ -382,6 +398,23 @@ function setHide(_hide) {
     $(_hide).hide();
 }
 
+function setSoundPlay(_sound) {
+    //console.log(_sound);
+    /*
+    if (m_curr_playing) {
+        m_curr_playing.pause(); // 이전 오디오 중지
+        m_curr_playing.currentTime = 0; // Reset time
+    }
+    */
+    m_curr_playing = new Audio(_sound);
+    //m_curr_playing.volume = m_sound_volume;
+    m_curr_playing.play();
+    /*
+    setTimeout(function () {
+        m_curr_playing.play();
+    }, 0);
+    */
+}
 
 
 
