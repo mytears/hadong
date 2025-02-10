@@ -24,6 +24,9 @@ let m_sound_volume = 1.0;
 
 let m_qr_code = null;
 
+let m_cate = 0;
+let m_sub = 0;
+
 function setInit() {
 
     /*
@@ -41,6 +44,16 @@ function setInit() {
     $(".page_10 .main_menu").on("touchstart mousedown", function (e) {
         e.preventDefault();
         onClickMainMenu(this);
+    });
+
+    $(".prev_btn").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        onClickPrevBtn(this);
+    });
+
+    $(".next_btn").on("touchstart mousedown", function (e) {
+        e.preventDefault();
+        onClickNextBtn(this);
     });
 
     $(".home_btn").on("touchstart mousedown", function (e) {
@@ -177,8 +190,8 @@ function setInitSetting() {
     $(".cate_03").hide();
 
     setTimeout(setHideCover, 500);
-    //m_curr_page = ".page_00";
-    setPage("00");
+    m_curr_page = ".page_00";
+    setPage("10");
 }
 
 function setMainReset() {
@@ -233,13 +246,13 @@ function setShowPopup(_cate, _num) {
         $(".qr").show();
         $(".popup_bot_txt_zone").show();
     }
-    
-    if($(".txt_programs").html()==""){
+
+    if ($(".txt_programs").html() == "") {
         $(".sub_area_2").hide();
-    }else{
+    } else {
         $(".sub_area_2").show();
     }
-    
+
     $(".popup_page").show();
 
 
@@ -267,6 +280,27 @@ function convStr(_str) {
         return _str.replace(/(\r\n|\n\r|\n|\r)/g, '<br>');
     }
 }
+
+function onClickPrevBtn(_obj) {
+    if($(_obj).hasClass("disabled")==true){
+        return;
+    }
+    let t_sub = parseInt(m_sub)-=1;
+    setSubPage(t_sub.toString());
+}
+
+function onClickNextBtn(_obj) {
+    if($(_obj).hasClass("disabled")==true){
+        return;
+    }
+    let t_sub = parseInt(m_sub)+=1;
+    setSubPage(t_sub.toString());
+}
+
+function onClickNextBtn(_obj) {
+    
+}
+
 
 function onClickHomeBtn(_obj) {
     if (m_clickable == false) {
@@ -383,10 +417,12 @@ function setCate(_code) {
     $("#id_over_0").hide();
     $("#id_over_1").hide();
 
-    $(".cate_00").hide();
-    $(".cate_01").hide();
-    $(".cate_02").hide();
-    $(".cate_03").hide();
+    $(".cate_page").hide();
+    $(".sub_page").hide();
+
+    m_cate = _code.substr(1, 1);
+    m_sub = "0";
+
     switch (_code) {
         case "20":
             $("#id_over_0").show();
@@ -405,6 +441,13 @@ function setCate(_code) {
             t_show = ".cate_03";
             break;
     }
+    $(".prev_btn").addClass("disabled");
+    if (m_contents_list[parseInt(m_cate)].length > 4) {
+        $(".next_btn").removeClass("disabled");
+    }
+
+
+    $(t_show + " .sub_00").show();
     $(t_show).show();
     gsap.fromTo(t_show + " .page_bg", {
         top: "50px"
@@ -413,6 +456,11 @@ function setCate(_code) {
         duration: 0.5,
         ease: "power2.out"
     });
+}
+
+function setSubPage(_num){
+    m_sub = _num;
+    
 }
 
 function setSwap(_hide, _show) {
@@ -452,7 +500,7 @@ function setSoundPlay(_sound) {
     */
     m_curr_playing = new Audio(_sound);
     //m_curr_playing.volume = m_sound_volume;
-    m_curr_playing.play();
+    //m_curr_playing.play();
     /*
     setTimeout(function () {
         m_curr_playing.play();

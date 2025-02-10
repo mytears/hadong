@@ -442,6 +442,84 @@
     animation: up-down 0.75s infinite ease-out alternate;
 }
 
+
+.cate_00 .sub_01 .pos_btn[code="010"] {
+    top: 500px;
+    left: 475px;
+}
+
+.cate_00 .sub_01 .pos_btn[code="011"] {
+    top: 300px;
+    left: 1160px;
+}
+
+.cate_00 .sub_01 .pos_btn[code="012"] {
+    top: 300px;
+    left: 315px;
+}
+
+.cate_00 .sub_01 .pos_btn[code="013"] {
+    top: 240px;
+    left: 935px;
+}
+
+.cate_00 .sub_01 .cup_wave {
+    top: 840px;
+    left: 755px;
+}
+
+.cate_00 .sub_01 .cup_img {
+    position: absolute;
+    top: 680px;
+    left: 735px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
+
+
+.cate_00 .sub_02 .pos_btn[code="020"] {
+    top: 500px;
+    left: 475px;
+}
+
+.cate_00 .sub_02 .pos_btn[code="021"] {
+    top: 300px;
+    left: 1160px;
+}
+
+.cate_00 .sub_02 .pos_btn[code="022"] {
+    top: 300px;
+    left: 315px;
+}
+
+.cate_00 .sub_02 .pos_btn[code="023"] {
+    top: 240px;
+    left: 935px;
+}
+
+.cate_00 .sub_02 .cup_wave {
+    top: 840px;
+    left: 755px;
+}
+
+.cate_00 .sub_02 .cup_img {
+    position: absolute;
+    top: 680px;
+    left: 735px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .cate_01 .sub_00 .pos_btn[code="100"] {
     top: 500px;
     left: 1135px;
@@ -474,6 +552,10 @@
     animation: up-down 0.75s infinite ease-out alternate;
 }
 
+
+
+
+
 .cate_02 .sub_00 .pos_btn[code="200"] {
     top: 580px;
     left: 370px;
@@ -505,6 +587,10 @@
     left: 650px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
+
+
+
+
 
 .cate_03 .sub_00 .pos_btn[code="300"] {
     top: 675px;
