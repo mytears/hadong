@@ -22,6 +22,8 @@ let m_clickable = true;
 let m_curr_playing = null;
 let m_sound_volume = 1.0;
 
+let m_qr_code = null;
+
 function setInit() {
 
     /*
@@ -68,7 +70,7 @@ function setInit() {
     setInitFsCommand();
 }
 
-function setTouchSoundPlay(){
+function setTouchSoundPlay() {
     setSoundPlay(m_header.touch_sound);
 }
 
@@ -153,9 +155,19 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    m_qr_code = new QRCode(document.getElementById("id_qr"), {
+        text: '',
+        width: 128,
+        height: 128,
+        colorDark: '#375D34',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.L,
+    });
+
+
     $("#id_over_0").hide();
     $("#id_over_1").hide();
-    
+
     $(".popup_page").hide();
     $(".page_20").hide();
     $(".page_10").hide();
@@ -163,7 +175,7 @@ function setInitSetting() {
     $(".cate_01").hide();
     $(".cate_02").hide();
     $(".cate_03").hide();
-    
+
     setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
     setPage("00");
@@ -173,17 +185,17 @@ function setMainReset() {
     m_clickable = true;
 
     $(".page_00 .cup_img").removeClass("pause");
-    $(".page_00 .cup_img").css("opacity","1");
-    $(".page_00 .cup_img").css("top","740px");
-    $(".page_00 .cup_img").css("left","720px");
+    $(".page_00 .cup_img").css("opacity", "1");
+    $(".page_00 .cup_img").css("top", "740px");
+    $(".page_00 .cup_img").css("left", "720px");
     $(".page_00 .cup_wave").show();
     $(".page_00 .cup_txt").show();
 
 
     $(".page_10 .cup_img").removeClass("pause");
-    $(".page_10 .cup_img").css("opacity","1");
-    $(".page_10 .cup_img").css("top","620px");
-    $(".page_10 .cup_img").css("left","700px");
+    $(".page_10 .cup_img").css("opacity", "1");
+    $(".page_10 .cup_img").css("top", "620px");
+    $(".page_10 .cup_img").css("left", "700px");
     $(".page_10 .cup_wave").show();
 
 
@@ -200,19 +212,34 @@ function setShowPopup(_cate, _num) {
     $(".txt_programs").html("");
     $(".img_0").attr("src", "");
     $(".img_1").attr("src", "");
-    $(".img_2").attr("src", "");
+    //$(".img_2").attr("src", "");
+    $(".qr").hide();
+    $(".popup_bot_txt_zone").hide();
 
 
     let t_contents = m_contents_list[_cate][_num];
 
-    $(".txt_title").html(t_contents.name);
-    $(".txt_desc").html(t_contents.desc);
-    $(".txt_address").html(t_contents.address);
-    $(".txt_tel").html(t_contents.tel);
-    $(".txt_programs").html(t_contents.programs);
+    $(".txt_title").html(convStr(t_contents.name));
+    $(".txt_desc").html(convStr(t_contents.desc));
+    $(".txt_address").html(convStr(t_contents.address));
+    $(".txt_tel").html(convStr(t_contents.tel));
+    $(".txt_programs").html(convStr(t_contents.programs));
     $(".img_0").attr("src", t_contents.main_img_url);
     $(".img_1").attr("src", t_contents.sub_img_url);
-    $(".img_2").attr("src", t_contents.qr_img_url);
+    //$(".img_2").attr("src", t_contents.qr_img_url);
+    m_qr_code.clear();
+    if (t_contents.qr_img_url != "null" && t_contents.qr_img_url != null && t_contents.qr_img_url != undefined) {
+        m_qr_code.makeCode(t_contents.qr_img_url);
+        $(".qr").show();
+        $(".popup_bot_txt_zone").show();
+    }
+    
+    if($(".txt_programs").html()==""){
+        $(".sub_area_2").hide();
+    }else{
+        $(".sub_area_2").show();
+    }
+    
     $(".popup_page").show();
 
 
@@ -231,6 +258,14 @@ function setShowPopup(_cate, _num) {
 function setHidePopup() {
     m_clickable = true;
     $(".popup_page").fadeOut();
+}
+
+function convStr(_str) {
+    if (_str == null) {
+        return "";
+    } else {
+        return _str.replace(/(\r\n|\n\r|\n|\r)/g, '<br>');
+    }
 }
 
 function onClickHomeBtn(_obj) {
@@ -307,12 +342,12 @@ function setPage(_code) {
             break;
         case "10":
             $(".page_10 .cup_img").removeClass("pause");
-            $(".page_10 .cup_img").css("opacity","1");
-            $(".page_10 .cup_img").css("top","620px");
-            $(".page_10 .cup_img").css("left","700px");
+            $(".page_10 .cup_img").css("opacity", "1");
+            $(".page_10 .cup_img").css("top", "620px");
+            $(".page_10 .cup_img").css("left", "700px");
             $(".page_10 .cup_wave").show();
-            
-            
+
+
             setSwap(m_curr_page, ".page_10");
             break;
         case "20":
@@ -425,6 +460,19 @@ function setSoundPlay(_sound) {
     */
 }
 
+
+function setQrCode(_id, _url) {
+    var qrcode = new QRCode(document.getElementById(_id), {
+        text: '',
+        width: 128,
+        height: 128,
+        colorDark: '#375D34',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.L,
+    });
+    qrcode.clear();
+    qrcode.makeCode(_url);
+}
 
 
 
