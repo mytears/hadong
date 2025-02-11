@@ -120,8 +120,6 @@
     top: 95px;
 }
 
-
-
 .cup_wave {
     position: absolute;
     width: 380px;
@@ -133,8 +131,8 @@
 .page_00 .cup_wave {
     width: 400px;
     height: 210px;
-    top: 920px;
-    left: 750px;
+/*    top: 920px;*/
+/*    left: 750px;*/
 }
 
 .page_10 .cup_wave {
@@ -410,6 +408,10 @@
     height: 1200px;
 }
 
+.sub_page{
+    position: absolute;
+}
+
 .cate_00 .sub_00 .pos_btn[code="000"] {
     top: 500px;
     left: 475px;
@@ -553,6 +555,61 @@
 }
 
 
+.cate_01 .sub_01 .pos_btn[code="110"] {
+    top: 500px;
+    left: 1135px;
+}
+
+.cate_01 .sub_01 .pos_btn[code="111"] {
+    top: 460px;
+    left: 355px;
+}
+
+.cate_01 .sub_01 .pos_btn[code="112"] {
+    top: 260px;
+    left: 690px;
+}
+
+.cate_01 .sub_01 .pos_btn[code="113"] {
+    top: 240px;
+    left: 1275px;
+}
+
+.cate_01 .sub_01 .cup_wave {
+    top: 870px;
+    left: 650px;
+}
+
+.cate_01 .sub_01 .cup_img {
+    position: absolute;
+    top: 710px;
+    left: 630px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
+
+.cate_01 .sub_02 .pos_btn[code="120"] {
+    top: 500px;
+    left: 1135px;
+}
+
+.cate_01 .sub_02 .pos_btn[code="121"] {
+    top: 460px;
+    left: 355px;
+}
+
+.cate_01 .sub_02 .cup_wave {
+    top: 870px;
+    left: 650px;
+}
+
+.cate_01 .sub_02 .cup_img {
+    position: absolute;
+    top: 710px;
+    left: 630px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
 
 
 
@@ -582,6 +639,23 @@
 }
 
 .cate_02 .sub_00 .cup_img {
+    position: absolute;
+    top: 710px;
+    left: 650px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
+.cate_02 .sub_01 .pos_btn[code="210"] {
+    top: 580px;
+    left: 370px;
+}
+
+.cate_02 .sub_01 .cup_wave {
+    top: 870px;
+    left: 670px;
+}
+
+.cate_02 .sub_01 .cup_img {
     position: absolute;
     top: 710px;
     left: 650px;
@@ -623,6 +697,33 @@
     left: 710px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
+
+.cate_03 .sub_01 .pos_btn[code="310"] {
+    top: 675px;
+    left: 375px;
+}
+
+.cate_03 .sub_01 .cup_wave {
+    top: 850px;
+    left: 730px;
+}
+
+.cate_03 .sub_01 .cup_img {
+    position: absolute;
+    top: 690px;
+    left: 710px;
+    animation: up-down 0.75s infinite ease-out alternate;
+}
+
+
+
+
+
+
+
+
+
+
 
 .popup_page {
     position: absolute;
