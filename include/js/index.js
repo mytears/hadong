@@ -84,7 +84,7 @@ function setInit() {
 }
 
 function setTouchSoundPlay() {
-    setSoundPlay(m_header.touch_sound);
+    setSoundPlay();
 }
 
 function setLoadSetting(_url) {
@@ -188,7 +188,9 @@ function setInitSetting() {
     $(".cate_01").hide();
     $(".cate_02").hide();
     $(".cate_03").hide();
-
+    
+    m_curr_playing = new Audio(m_header.touch_sound);
+    
     setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
     setPage("00");
@@ -220,6 +222,7 @@ function setMainReset() {
 }
 
 function setShowPopup(_cate, _num) {
+    console.log("setShowPopup", _cate, _num);
     m_clickable = true;
     $(".txt_title").html("");
     $(".txt_desc").html("");
@@ -387,7 +390,7 @@ function onClickPopupBtn(_obj) {
     setClickableFalse();
     
     let t_code = $(_obj).attr("code");
-    //console.log(t_code);
+    console.log("onClickPopupBtn",t_code);
     let t_cate = parseInt(t_code.substr(0, 1));
     let t_page = parseInt(t_code.substr(1, 1));
     let t_idx = parseInt(t_code.substr(2, 1));
@@ -604,7 +607,7 @@ function setHide(_hide) {
     }
 }
 
-function setSoundPlay(_sound) {
+function setSoundPlay() {
     //console.log(_sound);
     /*
     if (m_curr_playing) {
@@ -612,9 +615,13 @@ function setSoundPlay(_sound) {
         m_curr_playing.currentTime = 0; // Reset time
     }
     */
-    m_curr_playing = new Audio(_sound);
+    //m_curr_playing = new Audio(_sound);
     //m_curr_playing.volume = m_sound_volume;
-    //m_curr_playing.play();
+    if (m_curr_playing) {
+        m_curr_playing.pause(); // 이전 오디오 중지
+        m_curr_playing.currentTime = 0; // Reset time
+    }
+    m_curr_playing.play();
     /*
     setTimeout(function () {
         m_curr_playing.play();
