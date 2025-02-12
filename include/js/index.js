@@ -28,7 +28,7 @@ let m_cate = 0;
 let m_sub = 0;
 
 function setInit() {
-
+    gsap.registerPlugin(MotionPathPlugin);
     /*
     $(".cup_img").on("touchstart mousedown", function (e) {
         e.preventDefault();
@@ -188,9 +188,9 @@ function setInitSetting() {
     $(".cate_01").hide();
     $(".cate_02").hide();
     $(".cate_03").hide();
-    
+
     m_curr_playing = new Audio(m_header.touch_sound);
-    
+
     setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
     setPage("00");
@@ -288,13 +288,13 @@ function convStr(_str) {
 }
 
 function onClickPrevBtn(_obj) {
-    
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     if ($(_obj).hasClass("disabled") == true) {
+        m_clickable = true;
         return;
     }
     let t_sub = parseInt(m_sub) - 1;
@@ -306,19 +306,20 @@ function onClickPrevBtn(_obj) {
     }
     console.log(m_sub);
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    setMoveCup(t_hide, -60, 0);
+    setMoveCup(t_hide, 120, 0, 1.5);
 
     setTimeout(setSubPage, 500, t_sub.toString());
 }
 
 function onClickNextBtn(_obj) {
-    
+
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     if ($(_obj).hasClass("disabled") == true) {
+        m_clickable = true;
         return;
     }
     let t_sub = parseInt(m_sub) + 1;
@@ -329,9 +330,9 @@ function onClickNextBtn(_obj) {
         return;
     }
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    setMoveCup(t_hide, -60, 0);
+    setMoveCup(t_hide, -120, 0, 3);
 
-    setTimeout(setSubPage, 500, t_sub.toString());
+    setTimeout(setSubPage, 2000, t_sub.toString());
 }
 
 function setPrevNextBtnState(t_sub, t_max) {
@@ -349,48 +350,102 @@ function setPrevNextBtnState(t_sub, t_max) {
     }
 }
 
-function setMoveCup(_parent, _top, _left) {
+function setMoveCupHome(_parent, _top, _left, _duration) {
+    let cupImg = $(_parent).find(".cup_img")[0];
+
+    let { x: firstX, y: firstY } = getFirstPathCoordinates('path_0');
+    
+    let currentX = $(cupImg).offset().left;
+    let currentY = $(cupImg).offset().top;
+    
+    let imgWidth = $(cupImg).outerWidth();
+    let imgHeight = $(cupImg).outerHeight();
+    
+    let centerX = currentX + imgWidth / 2;
+    let centerY = currentY + imgHeight / 2;
+    
+    let diffX = firstX - centerX;
+    let diffY = firstY - centerY;
+    //console.log(diffX, diffY);
+    //return;
+
+    gsap.set(cupImg, {
+        animation: "none"
+    });
+    gsap.to(cupImg, {
+        motionPath: {
+            path: "#path_0",
+            align: "#path_0",
+            alignOrigin: [0.5, 0.5]
+        },
+        opacity: 0,
+        scale: 0.5,
+        duration: _duration,
+        ease: "none",
+        onComplete: function () {
+            gsap.set(cupImg, {
+                x: 0,
+                y: 0,
+                opacity: 1,
+                scale: 1
+            });
+            $(cupImg).css('animation', 'up-down 0.75s infinite ease-out alternate');
+        }
+    });
+
+
+    $(_parent + " .cup_wave").fadeOut();
+}
+
+function setMoveCup(_parent, _top, _left, _duration) {
     let cupImg = $(_parent).find(".cup_img")[0];
     let f_top = parseFloat($(cupImg).css('top'));
     let f_left = parseFloat($(cupImg).css('left'));
-
+    let scaleFactor = Math.max(0.5, 1 - (_duration / 2) * 0.1); 
+    console.log(scaleFactor);
+    gsap.set(cupImg, {
+        animation: "none"
+    });
     gsap.to(cupImg, {
-        top: f_top + _top,
-        left: f_left + _left,
+        x: _left,
+        y: _top,
         opacity: 0,
-        duration: 1.5,
+        scale: scaleFactor,
+        duration: _duration,
         ease: "quad.out",
         onComplete: function () {
-            gsap.to(cupImg, {
-                top: f_top,
-                left: f_left,
-                duration: 0
+            gsap.set(cupImg, {
+                x: 0,
+                y: 0,
+                opacity: 1,
+                scale: 1
             });
+            $(cupImg).css('animation', 'up-down 0.75s infinite ease-out alternate');
         }
     });
     $(_parent + " .cup_wave").fadeOut();
 }
 
 function onClickHomeBtn(_obj) {
-    
+
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     //setMainReset();
     setPage("10");
 }
 
 function onClickPopupBtn(_obj) {
-    
+
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     let t_code = $(_obj).attr("code");
-    console.log("onClickPopupBtn",t_code);
+    console.log("onClickPopupBtn", t_code);
     let t_cate = parseInt(t_code.substr(0, 1));
     let t_page = parseInt(t_code.substr(1, 1));
     let t_idx = parseInt(t_code.substr(2, 1));
@@ -398,22 +453,22 @@ function onClickPopupBtn(_obj) {
 }
 
 function onClickCloseBtn(_obj) {
-    
+
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     setHidePopup();
 }
 
 function onClickCup(_obj) {
-    
+
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     //$(_obj).addClass("pause").animate({ top: "-=100px", left:"+=100px", opacity: 0 }, 3000);
     /*
     $(".page_00 .cup_img").addClass("pause").animate({
@@ -422,21 +477,21 @@ function onClickCup(_obj) {
         opacity: 0
     }, 1500);
     */
-    setMoveCup(".page_00", -30, 65);
+    setMoveCupHome(".page_00", -30, 65, 3);
 
     $(".page_00 .cup_wave").fadeOut();
     $(".page_00 .cup_txt").fadeOut();
 
-    setTimeout(setPage, 1000, "10");
+    setTimeout(setPage, 2000, "10");
 }
 
 function onClickMainMenu(_obj) {
-    console.log("m_clickable",m_clickable);
+    console.log("m_clickable", m_clickable);
     if (m_clickable == false) {
         return;
     }
     setClickableFalse();
-    
+
     let t_code = $(_obj).attr('code');
     //setPage("2"+t_code);
     /*
@@ -446,11 +501,11 @@ function onClickMainMenu(_obj) {
         opacity: 0
     }, 1500);
     */
-    setMoveCup(".page_10", -60, -40);
+    setMoveCup(".page_10", -120, -80, 3);
     $(".page_10 .cup_wave").fadeOut();
 
 
-    setTimeout(setPage, 500, "2" + t_code);
+    setTimeout(setPage, 2000, "2" + t_code);
 
 }
 
@@ -690,5 +745,25 @@ function setInitFsCommand() {
             console.log(arg.data);
             setCommand(arg.data);
         });
+    }
+}
+function getFirstPathCoordinates(pathId) {
+    // SVG path 요소를 선택
+    let path = document.getElementById(pathId);
+    
+    // path의 'd' 속성 값 가져오기
+    let pathData = path.getAttribute('d');
+    
+    // 'M' 뒤에 있는 첫 번째 좌표 (X, Y) 값 추출
+    let coordinates = pathData.match(/M\s*([\d\.]+)\s*([\d\.]+)/);
+    
+    if (coordinates) {
+        return {
+            x: parseFloat(coordinates[1]), // 첫 번째 X 좌표
+            y: parseFloat(coordinates[2])  // 첫 번째 Y 좌표
+        };
+    } else {
+        console.error('첫 번째 좌표를 찾을 수 없습니다.');
+        return { x: 0, y: 0 };  // 좌표를 찾지 못한 경우 기본값 반환
     }
 }

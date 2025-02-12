@@ -64,7 +64,7 @@
 
 .page_00 .cup_txt {
     position: absolute;
-    top: 953px;
+    top: 963px;
     left: 952px;
     text-align: center;
     letter-spacing: 0px;
@@ -146,7 +146,6 @@
     left: 720px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
-
 .cup_img.pause {
     animation-play-state: paused;
 }
@@ -932,169 +931,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.notice_main {
+svg {
     position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-}
-
-.notice_main .notice_box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.notice_main .notice_box img {
-    width: 100%;
-    height: 100%;
-}
-
-.notice_main .notice_box video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-.video_page {
     width: 1920px;
     height: 1200px;
-    background-color: #FFFFFF;
-}
-
-.video_page .image_zone {
-    position: absolute;
-    width: 694px;
-    height: 560px;
-    z-index: 10;
-    box-shadow: 0 0 0 2px #ff0000 inset;
-}
-
-.video_page .image_zone img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-.video_page .inner_border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 694px;
-    height: 560px;
-    background-color: transparent;
-    border: 3px solid #000000;
-    box-sizing: border-box;
-    display: none;
-}
-
-.video_page .video_zone {
-    position: absolute;
-    /*
-    width: 694px;
-    height: 560px;
-*/
-    width: 688px;
-    height: 556px;
-    z-index: 10;
-}
-
-
-.video_page .video_zone video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-.admin_video_page {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-}
-
-.admin_video_page .video_zone {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.admin_video_page video {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
-
-.admin_video_page .image_zone {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 8;
-}
-
-
-.debug_area {
-    position: absolute;
-    z-index: 999999999999999999;
-    top: 0;
-}
-
-.debug_area input {
-    font-size: 50px;
-}
-
-.debug_area .btn {
-    font-size: 50px;
+    z-index: 999;
+    pointer-events: none;
 }
