@@ -340,7 +340,7 @@ function onClickPrevBtn(_obj) {
     }
     
     
-    setMoveCup(t_hide, t_top, t_left, 2.5);
+    setMoveCup(t_hide, t_top, t_left, 2.5, "prev");
     //setMoveCup(t_hide, 120, 0, 1.5);
 
     setTimeout(setSubPage, 1500, t_sub.toString());
@@ -398,7 +398,7 @@ function onClickNextBtn(_obj) {
         }
     }
     
-    setMoveCup(t_hide, t_top, t_left, 3);
+    setMoveCup(t_hide, t_top, t_left, 3, "next");
 
     setTimeout(setSubPage, 2000, t_sub.toString());
 }
@@ -465,13 +465,16 @@ function setMoveCupHome(_parent, _top, _left, _duration) {
     $(_parent + " .cup_wave").fadeOut();
 }
 
-function setMoveCup(_parent, _top, _left, _duration) {
+function setMoveCup(_parent, _top, _left, _duration, _type) {
     let cupImg = $(_parent).find(".cup_img")[0];
     let f_top = parseFloat($(cupImg).css('top'));
     let f_left = parseFloat($(cupImg).css('left'));
     let scaleFactor = Math.max(0.5, 1 - (_duration / 2) * 0.1); 
-    console.log(scaleFactor);
+    //console.log(scaleFactor);
     //scaleFactor = 1;
+    if(_type == "prev"){
+        scaleFactor = 1.15;
+    }
     gsap.set(cupImg, {
         animation: "none"
     });
@@ -482,7 +485,7 @@ function setMoveCup(_parent, _top, _left, _duration) {
         scale: scaleFactor,
         duration: _duration,
         //ease: "none",
-        ease: "quad.in-out",
+        ease: "quad.out",
         onComplete: function () {
             gsap.set(cupImg, {
                 x: 0,
