@@ -413,23 +413,23 @@
 }
 
 .cate_00 .sub_00 .pos_btn[code="000"] {
-    top: 500px;
-    left: 475px;
+    top: 596px;
+    left: 480px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="001"] {
-    top: 300px;
-    left: 1160px;
+    top: 366px;
+    left: 1252px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="002"] {
-    top: 300px;
-    left: 315px;
+    top: 366px;
+    left: 314px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="003"] {
-    top: 240px;
-    left: 935px;
+    top: 239px;
+    left: 982px;
 }
 
 .cate_00 .sub_00 .cup_wave {
@@ -446,23 +446,23 @@
 
 
 .cate_00 .sub_01 .pos_btn[code="010"] {
-    top: 500px;
-    left: 475px;
+    top: 712px;
+    left: 394px;
 }
 
 .cate_00 .sub_01 .pos_btn[code="011"] {
-    top: 300px;
-    left: 1160px;
+    top: 559px;
+    left: 1154px;
 }
 
 .cate_00 .sub_01 .pos_btn[code="012"] {
-    top: 300px;
-    left: 315px;
+    top: 377px;
+    left: 326px;
 }
 
 .cate_00 .sub_01 .pos_btn[code="013"] {
-    top: 240px;
-    left: 935px;
+    top: 237px;
+    left: 1074px;
 }
 
 .cate_00 .sub_01 .cup_wave {
@@ -473,30 +473,20 @@
 .cate_00 .sub_01 .cup_img {
     position: absolute;
     top: 680px;
-    left: 735px;
+    left: 685px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
 
 
 
 .cate_00 .sub_02 .pos_btn[code="020"] {
-    top: 500px;
-    left: 475px;
+    top: 487px;
+    left: 528px;
 }
 
 .cate_00 .sub_02 .pos_btn[code="021"] {
-    top: 300px;
-    left: 1160px;
-}
-
-.cate_00 .sub_02 .pos_btn[code="022"] {
-    top: 300px;
-    left: 315px;
-}
-
-.cate_00 .sub_02 .pos_btn[code="023"] {
-    top: 240px;
-    left: 935px;
+    top: 339px;
+    left: 1350px;
 }
 
 .cate_00 .sub_02 .cup_wave {
@@ -523,23 +513,23 @@
 
 
 .cate_01 .sub_00 .pos_btn[code="100"] {
-    top: 500px;
-    left: 1135px;
+    top: 463px;
+    left: 357px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="101"] {
-    top: 460px;
-    left: 355px;
+    top: 526px;
+    left: 1134px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="102"] {
-    top: 260px;
-    left: 690px;
+    top: 251px;
+    left: 681px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="103"] {
-    top: 240px;
-    left: 1275px;
+    top: 216px;
+    left: 1287px;
 }
 
 .cate_01 .sub_00 .cup_wave {
@@ -556,23 +546,23 @@
 
 
 .cate_01 .sub_01 .pos_btn[code="110"] {
-    top: 500px;
-    left: 1135px;
+    top: 677px;
+    left: 593px;
 }
 
 .cate_01 .sub_01 .pos_btn[code="111"] {
-    top: 460px;
-    left: 355px;
+    top: 410px;
+    left: 1207px;
 }
 
 .cate_01 .sub_01 .pos_btn[code="112"] {
-    top: 260px;
-    left: 690px;
+    top: 369px;
+    left: 428px;
 }
 
 .cate_01 .sub_01 .pos_btn[code="113"] {
-    top: 240px;
-    left: 1275px;
+    top: 244px;
+    left: 902px;
 }
 
 .cate_01 .sub_01 .cup_wave {
@@ -583,19 +573,19 @@
 .cate_01 .sub_01 .cup_img {
     position: absolute;
     top: 710px;
-    left: 630px;
+    left: 830px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
 
 
 .cate_01 .sub_02 .pos_btn[code="120"] {
-    top: 500px;
-    left: 1135px;
+    top: 564px;
+    left: 467px;
 }
 
 .cate_01 .sub_02 .pos_btn[code="121"] {
-    top: 460px;
-    left: 355px;
+    top: 357px;
+    left: 1007px;
 }
 
 .cate_01 .sub_02 .cup_wave {
@@ -606,7 +596,7 @@
 .cate_01 .sub_02 .cup_img {
     position: absolute;
     top: 710px;
-    left: 630px;
+    left: 760px;
     animation: up-down 0.75s infinite ease-out alternate;
 }
 
@@ -614,23 +604,23 @@
 
 
 .cate_02 .sub_00 .pos_btn[code="200"] {
-    top: 580px;
-    left: 370px;
+    top: 583px;
+    left: 372px;
 }
 
 .cate_02 .sub_00 .pos_btn[code="201"] {
-    top: 425px;
-    left: 570px;
+    top: 420px;
+    left: 573px;
 }
 
 .cate_02 .sub_00 .pos_btn[code="202"] {
-    top: 295px;
-    left: 1225px;
+    top: 312px;
+    left: 1222px;
 }
 
 .cate_02 .sub_00 .pos_btn[code="203"] {
-    top: 180px;
-    left: 1380px;
+    top: 169px;
+    left: 1382px;
 }
 
 .cate_02 .sub_00 .cup_wave {
@@ -646,8 +636,8 @@
 }
 
 .cate_02 .sub_01 .pos_btn[code="210"] {
-    top: 580px;
-    left: 370px;
+    top: 479px;
+    left: 533px;
 }
 
 .cate_02 .sub_01 .cup_wave {
@@ -667,23 +657,23 @@
 
 
 .cate_03 .sub_00 .pos_btn[code="300"] {
-    top: 675px;
-    left: 375px;
+    top: 683px;
+    left: 378px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="301"] {
-    top: 385px;
-    left: 1135px;
+    top: 386px;
+    left: 1133px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="302"] {
-    top: 355px;
-    left: 185px;
+    top: 353px;
+    left: 182px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="303"] {
-    top: 250px;
-    left: 915px;
+    top: 236px;
+    left: 916px;
 }
 
 .cate_03 .sub_00 .cup_wave {
@@ -699,8 +689,8 @@
 }
 
 .cate_03 .sub_01 .pos_btn[code="310"] {
-    top: 675px;
-    left: 375px;
+    top: 409px;
+    left: 364px;
 }
 
 .cate_03 .sub_01 .cup_wave {

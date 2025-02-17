@@ -306,9 +306,44 @@ function onClickPrevBtn(_obj) {
     }
     console.log(m_sub);
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    setMoveCup(t_hide, 120, 0, 1.5);
+    console.log("<<<",m_cate,m_sub);
+    
+    let t_top = 0;
+    let t_left = 0;
+    
+    if(m_cate == "0"){
+        if(m_sub == "1"){
+            t_top = 120;
+            t_left = 60;
+        }else if(m_sub == "2"){
+            t_top = 120;
+            t_left = -60;
+        }
+    }else if(m_cate == "1"){
+        if(m_sub == "1"){
+            t_top = 150;
+            t_left = -10;
+        }else if(m_sub == "2"){
+            t_top = 150;
+            t_left = 90;
+        }
+    }else if(m_cate == "2"){
+        if(m_sub == "1"){
+            t_top = 150;
+            t_left = -80;
+        }
+    }else if(m_cate == "3"){
+        if(m_sub == "1"){
+            t_top = 150;
+            t_left = 80;
+        }
+    }
+    
+    
+    setMoveCup(t_hide, t_top, t_left, 2.5);
+    //setMoveCup(t_hide, 120, 0, 1.5);
 
-    setTimeout(setSubPage, 500, t_sub.toString());
+    setTimeout(setSubPage, 1500, t_sub.toString());
 }
 
 function onClickNextBtn(_obj) {
@@ -330,7 +365,40 @@ function onClickNextBtn(_obj) {
         return;
     }
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    setMoveCup(t_hide, -120, 0, 3);
+    console.log(">>>",m_cate,m_sub);
+    
+    let t_top = 0;
+    let t_left = 0;
+    
+    if(m_cate == "0"){
+        if(m_sub == "0"){
+            t_top = -120;
+            t_left = 0;
+        }else if(m_sub == "1"){
+            t_top = -120;
+            t_left = -100;
+        }
+    }else if(m_cate == "1"){
+        if(m_sub == "0"){
+            t_top = -120;
+            t_left = 30;
+        }else if(m_sub == "1"){
+            t_top = -120;
+            t_left = -50;
+        }
+    }else if(m_cate == "2"){
+        if(m_sub == "0"){
+            t_top = -120;
+            t_left = 80;
+        }
+    }else if(m_cate == "3"){
+        if(m_sub == "0"){
+            t_top = -120;
+            t_left = -90;
+        }
+    }
+    
+    setMoveCup(t_hide, t_top, t_left, 3);
 
     setTimeout(setSubPage, 2000, t_sub.toString());
 }
@@ -403,6 +471,7 @@ function setMoveCup(_parent, _top, _left, _duration) {
     let f_left = parseFloat($(cupImg).css('left'));
     let scaleFactor = Math.max(0.5, 1 - (_duration / 2) * 0.1); 
     console.log(scaleFactor);
+    //scaleFactor = 1;
     gsap.set(cupImg, {
         animation: "none"
     });
@@ -412,7 +481,8 @@ function setMoveCup(_parent, _top, _left, _duration) {
         opacity: 0,
         scale: scaleFactor,
         duration: _duration,
-        ease: "quad.out",
+        //ease: "none",
+        ease: "quad.in-out",
         onComplete: function () {
             gsap.set(cupImg, {
                 x: 0,

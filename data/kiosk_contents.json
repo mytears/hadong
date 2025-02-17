@@ -108,22 +108,9 @@
             "qr_img_url": "https://linktr.ee/bdgtea"
   },
         {
-            "id": "8",
-            "cate": "0",
-            "code": "8",
-            "name": "삼태다원",
-            "desc": "호천자가 만든 삼태자를 만날 수 있는 다실",
-            "address": "경남 하동군 화개면 침점2길 29",
-            "tel": "010-3560-2181",
-            "programs": "차담",
-            "main_img_url": "commonfiles/images/img_0_8_0.png",
-            "sub_img_url": "commonfiles/images/img_0_8_1.png",
-            "qr_img_url": "https://www.instagram.com/hdgt_samtae"
-  },
-        {
             "id": "9",
             "cate": "0",
-            "code": "9",
+            "code": "8",
             "name": "조태연가 ",
             "desc": "null",
             "address": "경남 하동군 화개면 맥전길 60",
@@ -136,7 +123,7 @@
         {
             "id": "10",
             "cate": "0",
-            "code": "10",
+            "code": "9",
             "name": "효월수제차",
             "desc": "천상의 이슬농차를 즐길수 있는 다실",
             "address": "경남 하동군 화개면 목압길 10",
