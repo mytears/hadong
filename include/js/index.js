@@ -600,25 +600,25 @@ function setPage(_code) {
             setSwap(m_curr_page, ".page_10");
             break;
         case "20":
-            $("#id_title_0").html("전통다도 여행");
+            $("#id_title_0").html("전통 다도 여행");
             $("#id_title_1").html("하동의 전통적 다실 방문 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "21":
-            $("#id_title_0").html("자연 속 힐링<br>다실 여행");
+            $("#id_title_0").html("자연 다실 여행");
             $("#id_title_1").html("지리산 풍경과 섬진강이 어우러진<br>자연 풍경 속다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "22":
-            $("#id_title_0").html("현대 감각 다실<br>여행");
+            $("#id_title_0").html("현대 다실 여행");
             $("#id_title_1").html("젊은 감각의 현대적 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "23":
-            $("#id_title_0").html("다실에서 머무는<br>휴식 여행");
+            $("#id_title_0").html("휴식 다실 여행");
             $("#id_title_1").html("여유를 즐기며 다숙이 가능한 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
