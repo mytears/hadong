@@ -168,6 +168,8 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    setBgmPlay();
+    
     m_qr_code = new QRCode(document.getElementById("id_qr"), {
         text: '',
         width: 128,
@@ -607,7 +609,7 @@ function setPage(_code) {
             break;
         case "21":
             $("#id_title_0").html("자연 다실 여행");
-            $("#id_title_1").html("지리산 풍경과 섬진강이 어우러진<br>자연 풍경 속다실 코스");
+            $("#id_title_1").html("지리산 풍경과 섬진강이 어우러진<br>자연 풍경 속 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
@@ -733,6 +735,13 @@ function setHide(_hide) {
     if ($(_hide + " .cup_img").length > 0) {
         $(_hide + " .cup_img").css("opacity", "1");
     }
+}
+
+function setBgmPlay() {
+    const audio = new Audio(m_header.bgm_sound);
+    audio.volume = m_header.bgm_volume;
+    audio.loop = true; // 무한 반복 설정
+    audio.play();
 }
 
 function setSoundPlay() {
