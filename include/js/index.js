@@ -220,6 +220,7 @@ function setMainReset() {
     //    $(".page_10 .cup_img").css("left", "700px");
     //$(".page_10 .cup_wave").show();
 
+    $(".popup_page").hide();
     setPage("00");
 }
 
