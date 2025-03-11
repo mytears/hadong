@@ -1,1 +1,0 @@
-.\ffmpeg -i input2.mov -c:v libvpx-vp9 -pix_fmt yuva420p output2.webm

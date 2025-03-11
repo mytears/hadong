@@ -399,7 +399,7 @@
     position: absolute;
     width: 120px;
     height: 320px;
-/*    border: 3px solid #000000;*/
+    border: 3px solid #000000;
     opacity: 0.3;
 }
 
@@ -413,23 +413,23 @@
 }
 
 .cate_00 .sub_00 .pos_btn[code="000"] {
-    top: 596px;
-    left: 480px;
+    top: 599px;
+    left: 462px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="001"] {
-    top: 366px;
-    left: 1252px;
+    top: 369px;
+    left: 1250px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="002"] {
-    top: 366px;
-    left: 314px;
+    top: 386px;
+    left: 289px;
 }
 
 .cate_00 .sub_00 .pos_btn[code="003"] {
-    top: 239px;
-    left: 982px;
+    top: 236px;
+    left: 985px;
 }
 
 .cate_00 .sub_00 .cup_wave {
@@ -446,23 +446,18 @@
 
 
 .cate_00 .sub_01 .pos_btn[code="010"] {
-    top: 712px;
-    left: 394px;
+    top: 713px;
+    left: 365px;
 }
 
 .cate_00 .sub_01 .pos_btn[code="011"] {
-    top: 559px;
-    left: 1154px;
+    top: 436px;
+    left: 1120px;
 }
 
 .cate_00 .sub_01 .pos_btn[code="012"] {
-    top: 377px;
-    left: 326px;
-}
-
-.cate_00 .sub_01 .pos_btn[code="013"] {
-    top: 237px;
-    left: 1074px;
+    top: 334px;
+    left: 295px;
 }
 
 .cate_00 .sub_01 .cup_wave {
@@ -480,13 +475,18 @@
 
 
 .cate_00 .sub_02 .pos_btn[code="020"] {
-    top: 487px;
-    left: 528px;
+    top: 584px;
+    left: 389px;
 }
 
 .cate_00 .sub_02 .pos_btn[code="021"] {
-    top: 339px;
-    left: 1350px;
+    top: 387px;
+    left: 624px;
+}
+
+.cate_00 .sub_02 .pos_btn[code="022"] {
+    top: 295px;
+    left: 1327px;
 }
 
 .cate_00 .sub_02 .cup_wave {
@@ -513,23 +513,23 @@
 
 
 .cate_01 .sub_00 .pos_btn[code="100"] {
-    top: 463px;
-    left: 357px;
+    top: 525px;
+    left: 336px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="101"] {
-    top: 526px;
-    left: 1134px;
+    top: 654px;
+    left: 1187px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="102"] {
-    top: 251px;
-    left: 681px;
+    top: 342px;
+    left: 572px;
 }
 
 .cate_01 .sub_00 .pos_btn[code="103"] {
-    top: 216px;
-    left: 1287px;
+    top: 314px;
+    left: 1299px;
 }
 
 .cate_01 .sub_00 .cup_wave {
@@ -546,23 +546,18 @@
 
 
 .cate_01 .sub_01 .pos_btn[code="110"] {
-    top: 677px;
-    left: 593px;
+    top: 725px;
+    left: 542px;
 }
 
 .cate_01 .sub_01 .pos_btn[code="111"] {
-    top: 410px;
-    left: 1207px;
+    top: 348px;
+    left: 1162px;
 }
 
 .cate_01 .sub_01 .pos_btn[code="112"] {
-    top: 369px;
-    left: 428px;
-}
-
-.cate_01 .sub_01 .pos_btn[code="113"] {
-    top: 244px;
-    left: 902px;
+    top: 451px;
+    left: 372px;
 }
 
 .cate_01 .sub_01 .cup_wave {
@@ -579,13 +574,18 @@
 
 
 .cate_01 .sub_02 .pos_btn[code="120"] {
-    top: 564px;
-    left: 467px;
+    top: 668px;
+    left: 444px;
 }
 
 .cate_01 .sub_02 .pos_btn[code="121"] {
-    top: 357px;
-    left: 1007px;
+    top: 450px;
+    left: 1179px;
+}
+
+.cate_01 .sub_02 .pos_btn[code="122"] {
+    top: 300px;
+    left: 960px;
 }
 
 .cate_01 .sub_02 .cup_wave {
@@ -604,23 +604,18 @@
 
 
 .cate_02 .sub_00 .pos_btn[code="200"] {
-    top: 583px;
-    left: 372px;
+    top: 569px;
+    left: 326px;
 }
 
 .cate_02 .sub_00 .pos_btn[code="201"] {
-    top: 420px;
-    left: 573px;
+    top: 421px;
+    left: 575px;
 }
 
 .cate_02 .sub_00 .pos_btn[code="202"] {
-    top: 312px;
-    left: 1222px;
-}
-
-.cate_02 .sub_00 .pos_btn[code="203"] {
-    top: 169px;
-    left: 1382px;
+    top: 300px;
+    left: 1278px;
 }
 
 .cate_02 .sub_00 .cup_wave {
@@ -636,8 +631,18 @@
 }
 
 .cate_02 .sub_01 .pos_btn[code="210"] {
-    top: 479px;
-    left: 533px;
+    top: 528px;
+    left: 512px;
+}
+
+.cate_02 .sub_01 .pos_btn[code="211"] {
+    top: 376px;
+    left: 1381px;
+}
+
+.cate_02 .sub_01 .pos_btn[code="212"] {
+    top: 231px;
+    left: 1217px;
 }
 
 .cate_02 .sub_01 .cup_wave {
@@ -657,23 +662,23 @@
 
 
 .cate_03 .sub_00 .pos_btn[code="300"] {
-    top: 683px;
-    left: 378px;
+    top: 710px;
+    left: 345px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="301"] {
-    top: 386px;
-    left: 1133px;
+    top: 364px;
+    left: 145px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="302"] {
-    top: 353px;
-    left: 182px;
+    top: 249px;
+    left: 919px;
 }
 
 .cate_03 .sub_00 .pos_btn[code="303"] {
-    top: 236px;
-    left: 916px;
+    top: 390px;
+    left: 1168px;
 }
 
 .cate_03 .sub_00 .cup_wave {

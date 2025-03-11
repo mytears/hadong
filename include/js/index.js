@@ -525,7 +525,9 @@ function onClickPopupBtn(_obj) {
     let t_cate = parseInt(t_code.substr(0, 1));
     let t_page = parseInt(t_code.substr(1, 1));
     let t_idx = parseInt(t_code.substr(2, 1));
-    setShowPopup(t_cate, t_page * 4 + t_idx);
+    let t_cid = parseInt($(_obj).attr("cid"));
+    setShowPopup(t_cate, t_cid);
+    //setShowPopup(t_cate, t_page * 4 + t_idx);
 }
 
 function onClickCloseBtn(_obj) {
@@ -603,26 +605,26 @@ function setPage(_code) {
             setSwap(m_curr_page, ".page_10");
             break;
         case "20":
-            $("#id_title_0").html("전통 다도 여행");
+            $("#id_title_0").html("전통 문화 다실");
             $("#id_title_1").html("하동의 전통적 다실 방문 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "21":
-            $("#id_title_0").html("자연 다실 여행");
+            $("#id_title_0").html("자연 속 힐링 다실");
             $("#id_title_1").html("지리산 풍경과 섬진강이 어우러진<br>자연 풍경 속 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "22":
-            $("#id_title_0").html("현대 다실 여행");
+            $("#id_title_0").html("현대 감각 다실");
             $("#id_title_1").html("젊은 감각의 현대적 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
         case "23":
-            $("#id_title_0").html("휴식 다실 여행");
-            $("#id_title_1").html("여유를 즐기며 다숙이 가능한 다실 코스");
+            $("#id_title_0").html("차와 머무는 다실");
+            $("#id_title_1").html("여유를 즐기며 숙박이 가능한 다실 코스");
             setSwap(m_curr_page, ".page_20");
             setCate(_code);
             break;
@@ -665,8 +667,11 @@ function setCate(_code) {
     }
 
     $(".prev_btn").addClass("disabled");
+    //console.log(m_contents_list[parseInt(m_cate)].length);
     if (m_contents_list[parseInt(m_cate)].length > 4) {
         $(".next_btn").removeClass("disabled");
+    }else{
+        $(".next_btn").addClass("disabled");
     }
 
 

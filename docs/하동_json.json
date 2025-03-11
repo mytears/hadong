@@ -8,9 +8,9 @@
     "address": "경남 하동군 화개면 화개로 539",
     "tel": "010-9299-1793",
     "programs": "티 클래스\n-> 생활 속 다례\n-> 하동 덖음차의 역사",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_0_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_0_1.png",
-    "qr_commonfiles/images/img_url": "https://linktr.ee/jukrotea?utm_source=qr_code"
+    "main_img_url": "commonfiles/images/img_0_0_0.png",
+    "sub_img_url": "commonfiles/images/img_0_0_1.png",
+    "qr_img_url": "https://linktr.ee/jukrotea?utm_source=qr_code"
   },
   {
     "id": "1",
@@ -21,9 +21,9 @@
     "address": "경남 하동군 화개면 진목길 13-3",
     "tel": "010-9642-5160",
     "programs": "차담, 차덖음체험",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_1_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_1_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/gok_chun"
+    "main_img_url": "commonfiles/images/img_0_1_0.png",
+    "sub_img_url": "commonfiles/images/img_0_1_1.png",
+    "qr_img_url": "https://www.instagram.com/gok_chun"
   },
   {
     "id": "2",
@@ -34,9 +34,9 @@
     "address": "경남 하동군 화개면 신촌도심길 43-22",
     "tel": "010-8526-0070",
     "programs": "차담",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_2_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_2_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/dosimdawon_official"
+    "main_img_url": "commonfiles/images/img_0_2_0.png",
+    "sub_img_url": "commonfiles/images/img_0_2_1.png",
+    "qr_img_url": "https://www.instagram.com/dosimdawon_official"
   },
   {
     "id": "3",
@@ -47,9 +47,9 @@
     "address": "경남 하동군 하동읍 섬진강대로 2764",
     "tel": "010-8373-3225 / 010-3830-1772",
     "programs": "티클래스 (예약제)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_3_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_3_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_0_3_0.png",
+    "sub_img_url": "commonfiles/images/img_0_3_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "4",
@@ -60,9 +60,9 @@
     "address": "경남 하동군 화개면 화개로 113",
     "tel": "010-3238-2778",
     "programs": "티클래스 (예약제)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_4_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_4_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_0_4_0.png",
+    "sub_img_url": "commonfiles/images/img_0_4_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "5",
@@ -73,9 +73,9 @@
     "address": "경남 하동군 화개면 섬진강대로 3904",
     "tel": "010-3878-9516 / 010-5580-9516",
     "programs": "차담, 티클래스",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_5_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_5_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/daweonbucun"
+    "main_img_url": "commonfiles/images/img_0_5_0.png",
+    "sub_img_url": "commonfiles/images/img_0_5_1.png",
+    "qr_img_url": "https://www.instagram.com/daweonbucun"
   },
   {
     "id": "6",
@@ -86,9 +86,9 @@
     "address": "경남 하동군 악양면 평사리 487",
     "tel": "055-883-6670",
     "programs": "카다로그에도 없음",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_6_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_6_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/teamansong"
+    "main_img_url": "commonfiles/images/img_0_6_0.png",
+    "sub_img_url": "commonfiles/images/img_0_6_1.png",
+    "qr_img_url": "https://www.instagram.com/teamansong"
   },
   {
     "id": "7",
@@ -99,9 +99,9 @@
     "address": "경남 하동군 화개면 화개로 733",
     "tel": "010-3599-8326",
     "programs": "붓당골 차담티코스- 쌀로 만든 디저트와 함께\n즐기는 하동수제차코스",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_7_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_7_1.png",
-    "qr_commonfiles/images/img_url": "https://linktr.ee/bdgtea"
+    "main_img_url": "commonfiles/images/img_0_7_0.png",
+    "sub_img_url": "commonfiles/images/img_0_7_1.png",
+    "qr_img_url": "https://linktr.ee/bdgtea"
   },
   {
     "id": "9",
@@ -112,9 +112,9 @@
     "address": "경남 하동군 화개면 맥전길 60",
     "tel": "055-883-1743 / 010-7197-7117",
     "programs": "티 클래스 (차 제다 과정 교육)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_9_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_9_1.png",
-    "qr_commonfiles/images/img_url": "https://linktr.ee/jukrotea?utm_source=qr_code"
+    "main_img_url": "commonfiles/images/img_0_9_0.png",
+    "sub_img_url": "commonfiles/images/img_0_9_1.png",
+    "qr_img_url": "https://linktr.ee/jukrotea?utm_source=qr_code"
   },
   {
     "id": "10",
@@ -125,9 +125,9 @@
     "address": "경남 하동군 화개면 목압길 10",
     "tel": "010-6210-6247",
     "programs": "제다수업, 제다체험찻집(시음)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_0_10_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_0_10_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/hyoworl"
+    "main_img_url": "commonfiles/images/img_0_10_0.png",
+    "sub_img_url": "commonfiles/images/img_0_10_1.png",
+    "qr_img_url": "https://www.instagram.com/hyoworl"
   },
   {
     "id": "11",
@@ -138,9 +138,9 @@
     "address": "경남 하동군 화개면 섬진강대로 3480-25",
     "tel": "010-9211-0272",
     "programs": "차 체험, 티 캠핑 (예약제)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_0_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_0_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_1_0_0.png",
+    "sub_img_url": "commonfiles/images/img_1_0_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "12",
@@ -151,9 +151,9 @@
     "address": "경남 하동군 악양면 악양서로 346",
     "tel": "055-883-3500",
     "programs": "매암차박물관, 다원산책",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_1_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_1_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/maeamtea66"
+    "main_img_url": "commonfiles/images/img_1_1_0.png",
+    "sub_img_url": "commonfiles/images/img_1_1_1.png",
+    "qr_img_url": "https://www.instagram.com/maeamtea66"
   },
   {
     "id": "13",
@@ -164,9 +164,9 @@
     "address": "경남 하동군 화개면 모암길 17",
     "tel": "010-3848-1696, 055-883-1696",
     "programs": "찻자리 기본/심화 운영",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_2_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_2_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/mansootea_hadong/"
+    "main_img_url": "commonfiles/images/img_1_2_0.png",
+    "sub_img_url": "commonfiles/images/img_1_2_1.png",
+    "qr_img_url": "https://www.instagram.com/mansootea_hadong/"
   },
   {
     "id": "14",
@@ -177,9 +177,9 @@
     "address": "경남 하동군 악앙면 주암길 36-7",
     "tel": "010-4019-3478",
     "programs": "티코스(티클래스) 운영 -예약제\n(당일 예약도 가능하나\n최소 2시간전 문의)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_3_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_3_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/muaesanbang/"
+    "main_img_url": "commonfiles/images/img_1_3_0.png",
+    "sub_img_url": "commonfiles/images/img_1_3_1.png",
+    "qr_img_url": "https://www.instagram.com/muaesanbang/"
   },
   {
     "id": "15",
@@ -190,9 +190,9 @@
     "address": "경남 하동군 하동읍 밤골길 137-24",
     "tel": "010-8988-7606",
     "programs": "차담, 티클래스, 차덖음체험",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_4_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_4_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/youn_woo_greentea_tea"
+    "main_img_url": "commonfiles/images/img_1_4_0.png",
+    "sub_img_url": "commonfiles/images/img_1_4_1.png",
+    "qr_img_url": "https://www.instagram.com/youn_woo_greentea_tea"
   },
   {
     "id": "16",
@@ -203,9 +203,9 @@
     "address": "경님 하동군 화개면 화개로 814, 2증",
     "tel": "070-7786-5124",
     "programs": "차담, 티클래스, 티캠핑",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_5_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_5_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/ilguda.tea"
+    "main_img_url": "commonfiles/images/img_1_5_0.png",
+    "sub_img_url": "commonfiles/images/img_1_5_1.png",
+    "qr_img_url": "https://www.instagram.com/ilguda.tea"
   },
   {
     "id": "17",
@@ -216,9 +216,9 @@
     "address": "화개면 일대 ",
     "tel": "055-880-2734",
     "programs": "야외 찻자리",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_6_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_6_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_1_6_0.png",
+    "sub_img_url": "commonfiles/images/img_1_6_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "18",
@@ -229,9 +229,9 @@
     "address": "화개면 운수리 산 127",
     "tel": "쌍계사 문의",
     "programs": "쌍계사 문의",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_7_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_7_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_1_7_0.png",
+    "sub_img_url": "commonfiles/images/img_1_7_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "19",
@@ -242,9 +242,9 @@
     "address": "경남 하동군 화개면 부춘길 22",
     "tel": "010-8541-7760",
     "programs": "차담, 티클래스, 차덖음체험, 티캠핑,\n차전문체험교육관",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_8_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_8_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/hanfarmtea"
+    "main_img_url": "commonfiles/images/img_1_8_0.png",
+    "sub_img_url": "commonfiles/images/img_1_8_1.png",
+    "qr_img_url": "https://www.instagram.com/hanfarmtea"
   },
   {
     "id": "20",
@@ -255,74 +255,87 @@
     "address": "경남 하동군 화개면 차시배지길 12-18",
     "tel": "010-8837-3131",
     "programs": "티클래스 운영- 예약제\n(당일 예약도 가능)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_1_9_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_1_9_1.png",
-    "qr_commonfiles/images/img_url": "https://m.site.naver.com/0RAP5"
+    "main_img_url": "commonfiles/images/img_1_9_0.png",
+    "sub_img_url": "commonfiles/images/img_1_9_1.png",
+    "qr_img_url": "https://m.site.naver.com/0RAP5"
   },
   {
-    "id": "21",
+    "id": "27",
     "cate": "2",
-    "code": "0",
-    "name": "K-POT 다실",
-    "desc": "홍우경 도예가가 운영하는 K-POP 다실",
-    "address": "경남 하동군 고전면 명교길 31",
-    "tel": "010-3227-9114",
-    "programs": "카다로그에도 없음",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_2_0_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_2_0_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "code": "1",
+    "name": "도재명차",
+    "desc": "전통 덖음방식의 차를 만날 수있는 다실",
+    "address": "경남 하동군 화개면 목압길 39-2",
+    "tel": "010-4017-8100",
+    "programs": "차담, 티클래스",
+    "main_img_url": "commonfiles/images/img_3_1_0.png",
+    "sub_img_url": "commonfiles/images/img_3_1_1.png",
+    "qr_img_url": "https://www.instagram.com/dojae_official"
   },
   {
     "id": "22",
     "cate": "2",
-    "code": "1",
+    "code": "2",
     "name": "쌍계명차",
     "desc": "대한민국식품명인 제28호 김동곤 명인이 운영하는 다실",
     "address": "경남 하동군 화개면 화개로 30",
     "tel": "055-883-2440",
     "programs": "카다로그에도 없음",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_2_1_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_2_1_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/sktea_official"
+    "main_img_url": "commonfiles/images/img_2_1_0.png",
+    "sub_img_url": "commonfiles/images/img_2_1_1.png",
+    "qr_img_url": "https://www.instagram.com/sktea_official"
   },
   {
     "id": "23",
     "cate": "2",
-    "code": "2",
+    "code": "3",
     "name": "탑리다원",
     "desc": "아름답고 편안한 티타임을 즐길 수 있는 다실",
     "address": "경남 하동군 화개면 원탑1길 24-4",
     "tel": "010-3868-0936",
     "programs": "티클래스, 티코스 운영\n(예약제, 당일 전화예약\n가능, 최대 8인)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_2_2_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_2_2_1.png",
-    "qr_commonfiles/images/img_url": "null"
+    "main_img_url": "commonfiles/images/img_2_2_0.png",
+    "sub_img_url": "commonfiles/images/img_2_2_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "24",
     "cate": "2",
-    "code": "3",
+    "code": "4",
     "name": "티스토리 하동",
     "desc": "수제차 전문 다실",
     "address": "경남 하동군 화개면 쌍계로 230",
     "tel": "055-883-0799",
     "programs": "카다로그에도 없음",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_2_3_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_2_3_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/hadongtea_official/"
+    "main_img_url": "commonfiles/images/img_2_3_0.png",
+    "sub_img_url": "commonfiles/images/img_2_3_1.png",
+    "qr_img_url": "https://www.instagram.com/hadongtea_official/"
   },
   {
     "id": "25",
     "cate": "2",
-    "code": "4",
+    "code": "5",
     "name": "티카페 하동",
     "desc": "하동군에서 직접 운영하는 곳으로 하동에서 생산되는 차를 기본으로 한 다양한 음료와 티푸드를 즐기고 \n치유와 힐링을 경험할 수 있는 곳",
     "address": "경남 하동군 화개면 쌍계로 571-27",
     "tel": "070-4171-8873",
     "programs": "하동 대표 식음료 판매\n티클래스, 야외족욕 체험, \n티 캠핑(차+다식)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_2_4_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_2_4_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/hadongtea_official/"
+    "main_img_url": "commonfiles/images/img_2_4_0.png",
+    "sub_img_url": "commonfiles/images/img_2_4_1.png",
+    "qr_img_url": "https://www.instagram.com/hadongtea_official/"
+  },
+  {
+    "id": "21",
+    "cate": "2",
+    "code": "6",
+    "name": "K-POT 다실",
+    "desc": "홍우경 도예가가 운영하는 K-POP 다실",
+    "address": "경남 하동군 고전면 명교길 31",
+    "tel": "010-3227-9114",
+    "programs": "카다로그에도 없음",
+    "main_img_url": "commonfiles/images/img_2_0_0.png",
+    "sub_img_url": "commonfiles/images/img_2_0_1.png",
+    "qr_img_url": "null"
   },
   {
     "id": "26",
@@ -333,60 +346,47 @@
     "address": "경남 하동군 화개면 목압길 24-2",
     "tel": "010-5334-7785",
     "programs": "다숙, 티클래스, (다담 티코스)\n(예약제) 60~90분 소요",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_3_0_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_3_0_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/gwana_tea_harmony "
-  },
-  {
-    "id": "27",
-    "cate": "3",
-    "code": "1",
-    "name": "도제명차",
-    "desc": "전통 덖음방식의 차를 만날 수있는 다실",
-    "address": "경남 하동군 화개면 목압길 39-2",
-    "tel": "010-4017-8100",
-    "programs": "차담, 티클래스",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_3_1_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_3_1_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/dojae_official"
+    "main_img_url": "commonfiles/images/img_3_0_0.png",
+    "sub_img_url": "commonfiles/images/img_3_0_1.png",
+    "qr_img_url": "https://www.instagram.com/gwana_tea_harmony "
   },
   {
     "id": "28",
     "cate": "3",
-    "code": "2",
+    "code": "1",
     "name": "수연제다",
     "desc": "가바(GABA)차와 6대 차류를 맛 볼 수 있는 다실",
     "address": "경남 하동군 화개면 정금대비길 65-1(정금리 743번지)",
     "tel": "055-884-0894 / 010-9441-0271 / 010-9442-0271",
     "programs": "티클래스, 다숙, 농촌교육농장(예약제)",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_3_2_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_3_2_1.png",
-    "qr_commonfiles/images/img_url": "https://m.smartstore.naver.com/sooyonjaeda"
+    "main_img_url": "commonfiles/images/img_3_2_0.png",
+    "sub_img_url": "commonfiles/images/img_3_2_1.png",
+    "qr_img_url": "https://m.smartstore.naver.com/sooyonjaeda"
   },
   {
     "id": "29",
     "cate": "3",
-    "code": "3",
+    "code": "2",
     "name": "유로제다",
     "desc": "나만이 즐길 수 있는 차 밭 전경이 있는다실",
     "address": "경남 하동군 화개면 신촌도심길 43-7",
     "tel": "010-2464-2711",
     "programs": "차담, 다숙",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_3_3_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_3_3_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/youro_official"
+    "main_img_url": "commonfiles/images/img_3_3_0.png",
+    "sub_img_url": "commonfiles/images/img_3_3_1.png",
+    "qr_img_url": "https://www.instagram.com/youro_official"
   },
   {
     "id": "30",
     "cate": "3",
-    "code": "4",
+    "code": "3",
     "name": "청석골감로다원",
     "desc": "대한민국식품명인 제91호 황인수 명인이 운영하는 다실",
     "address": "경남 하동군 화개면 모암길 44",
     "tel": "010-6248-5501",
     "programs": "차담, 티클래스, 차덖음체험, 다숙",
-    "main_commonfiles/images/img_url": "commonfiles/images/img_3_4_0.png",
-    "sub_commonfiles/images/img_url": "commonfiles/images/img_3_4_1.png",
-    "qr_commonfiles/images/img_url": "https://www.instagram.com/isuyeongim"
+    "main_img_url": "commonfiles/images/img_3_4_0.png",
+    "sub_img_url": "commonfiles/images/img_3_4_1.png",
+    "qr_img_url": "https://www.instagram.com/isuyeongim"
   }
 ]
