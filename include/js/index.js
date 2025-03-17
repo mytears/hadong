@@ -169,7 +169,7 @@ function setHideCover() {
 //초기화
 function setInitSetting() {
     setBgmPlay();
-    
+
     m_qr_code = new QRCode(document.getElementById("id_qr"), {
         text: '',
         width: 128,
@@ -246,6 +246,7 @@ function setShowPopup(_cate, _num) {
     $(".txt_address").html(convStr(t_contents.address));
     $(".txt_tel").html(convStr(t_contents.tel));
     $(".txt_programs").html(convStr(t_contents.programs));
+    $(".txt_detail").html(convStr(t_contents.detail));
     $(".img_0").attr("src", t_contents.main_img_url);
     $(".img_1").attr("src", t_contents.sub_img_url);
     //$(".img_2").attr("src", t_contents.qr_img_url);
@@ -256,11 +257,24 @@ function setShowPopup(_cate, _num) {
         $(".popup_bot_txt_zone").show();
     }
 
-    if ($(".txt_programs").html() == "") {
-        $(".sub_area_2").hide();
+    if (t_contents.detail != null && t_contents.detail != "null" && t_contents.detail != "") {
+            $(".sub_area_1").hide();
+            $(".sub_area_2").hide();
+        $(".sub_area_3").show();
     } else {
-        $(".sub_area_2").show();
+        $(".sub_area_3").hide();
+        if ($(".txt_tel").html() == "") {
+            $(".sub_area_1").hide();
+        } else {
+            $(".sub_area_1").show();
+        }
+        if ($(".txt_programs").html() == "") {
+            $(".sub_area_2").hide();
+        } else {
+            $(".sub_area_2").show();
+        }
     }
+
 
     $(".popup_page").show();
 
@@ -283,7 +297,7 @@ function setHidePopup() {
 }
 
 function convStr(_str) {
-    if (_str == null) {
+    if (_str == null || _str == "null") {
         return "";
     } else {
         return _str.replace(/(\r\n|\n\r|\n|\r)/g, '<br>');
@@ -309,40 +323,40 @@ function onClickPrevBtn(_obj) {
     }
     console.log(m_sub);
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    console.log("<<<",m_cate,m_sub);
-    
+    console.log("<<<", m_cate, m_sub);
+
     let t_top = 0;
     let t_left = 0;
-    
-    if(m_cate == "0"){
-        if(m_sub == "1"){
+
+    if (m_cate == "0") {
+        if (m_sub == "1") {
             t_top = 120;
             t_left = 60;
-        }else if(m_sub == "2"){
+        } else if (m_sub == "2") {
             t_top = 120;
             t_left = -60;
         }
-    }else if(m_cate == "1"){
-        if(m_sub == "1"){
+    } else if (m_cate == "1") {
+        if (m_sub == "1") {
             t_top = 150;
             t_left = -10;
-        }else if(m_sub == "2"){
+        } else if (m_sub == "2") {
             t_top = 150;
             t_left = 90;
         }
-    }else if(m_cate == "2"){
-        if(m_sub == "1"){
+    } else if (m_cate == "2") {
+        if (m_sub == "1") {
             t_top = 150;
             t_left = -80;
         }
-    }else if(m_cate == "3"){
-        if(m_sub == "1"){
+    } else if (m_cate == "3") {
+        if (m_sub == "1") {
             t_top = 150;
             t_left = 80;
         }
     }
-    
-    
+
+
     setMoveCup(t_hide, t_top, t_left, 2.5, "prev");
     //setMoveCup(t_hide, 120, 0, 1.5);
 
@@ -368,39 +382,39 @@ function onClickNextBtn(_obj) {
         return;
     }
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    console.log(">>>",m_cate,m_sub);
-    
+    console.log(">>>", m_cate, m_sub);
+
     let t_top = 0;
     let t_left = 0;
-    
-    if(m_cate == "0"){
-        if(m_sub == "0"){
+
+    if (m_cate == "0") {
+        if (m_sub == "0") {
             t_top = -120;
             t_left = 0;
-        }else if(m_sub == "1"){
+        } else if (m_sub == "1") {
             t_top = -120;
             t_left = -100;
         }
-    }else if(m_cate == "1"){
-        if(m_sub == "0"){
+    } else if (m_cate == "1") {
+        if (m_sub == "0") {
             t_top = -120;
             t_left = 30;
-        }else if(m_sub == "1"){
+        } else if (m_sub == "1") {
             t_top = -120;
             t_left = -50;
         }
-    }else if(m_cate == "2"){
-        if(m_sub == "0"){
+    } else if (m_cate == "2") {
+        if (m_sub == "0") {
             t_top = -120;
             t_left = 80;
         }
-    }else if(m_cate == "3"){
-        if(m_sub == "0"){
+    } else if (m_cate == "3") {
+        if (m_sub == "0") {
             t_top = -120;
             t_left = -90;
         }
     }
-    
+
     setMoveCup(t_hide, t_top, t_left, 3, "next");
 
     setTimeout(setSubPage, 2000, t_sub.toString());
@@ -424,17 +438,20 @@ function setPrevNextBtnState(t_sub, t_max) {
 function setMoveCupHome(_parent, _top, _left, _duration) {
     let cupImg = $(_parent).find(".cup_img")[0];
 
-    let { x: firstX, y: firstY } = getFirstPathCoordinates('path_0');
-    
+    let {
+        x: firstX,
+        y: firstY
+    } = getFirstPathCoordinates('path_0');
+
     let currentX = $(cupImg).offset().left;
     let currentY = $(cupImg).offset().top;
-    
+
     let imgWidth = $(cupImg).outerWidth();
     let imgHeight = $(cupImg).outerHeight();
-    
+
     let centerX = currentX + imgWidth / 2;
     let centerY = currentY + imgHeight / 2;
-    
+
     let diffX = firstX - centerX;
     let diffY = firstY - centerY;
     //console.log(diffX, diffY);
@@ -472,10 +489,10 @@ function setMoveCup(_parent, _top, _left, _duration, _type) {
     let cupImg = $(_parent).find(".cup_img")[0];
     let f_top = parseFloat($(cupImg).css('top'));
     let f_left = parseFloat($(cupImg).css('left'));
-    let scaleFactor = Math.max(0.5, 1 - (_duration / 2) * 0.1); 
+    let scaleFactor = Math.max(0.5, 1 - (_duration / 2) * 0.1);
     //console.log(scaleFactor);
     //scaleFactor = 1;
-    if(_type == "prev"){
+    if (_type == "prev") {
         scaleFactor = 1.15;
     }
     gsap.set(cupImg, {
@@ -671,7 +688,7 @@ function setCate(_code) {
     //console.log(m_contents_list[parseInt(m_cate)].length);
     if (m_contents_list[parseInt(m_cate)].length > 4) {
         $(".next_btn").removeClass("disabled");
-    }else{
+    } else {
         $(".next_btn").addClass("disabled");
     }
 
@@ -836,23 +853,27 @@ function setInitFsCommand() {
         });
     }
 }
+
 function getFirstPathCoordinates(pathId) {
     // SVG path 요소를 선택
     let path = document.getElementById(pathId);
-    
+
     // path의 'd' 속성 값 가져오기
     let pathData = path.getAttribute('d');
-    
+
     // 'M' 뒤에 있는 첫 번째 좌표 (X, Y) 값 추출
     let coordinates = pathData.match(/M\s*([\d\.]+)\s*([\d\.]+)/);
-    
+
     if (coordinates) {
         return {
             x: parseFloat(coordinates[1]), // 첫 번째 X 좌표
-            y: parseFloat(coordinates[2])  // 첫 번째 Y 좌표
+            y: parseFloat(coordinates[2]) // 첫 번째 Y 좌표
         };
     } else {
         console.error('첫 번째 좌표를 찾을 수 없습니다.');
-        return { x: 0, y: 0 };  // 좌표를 찾지 못한 경우 기본값 반환
+        return {
+            x: 0,
+            y: 0
+        }; // 좌표를 찾지 못한 경우 기본값 반환
     }
 }

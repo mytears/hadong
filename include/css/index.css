@@ -790,6 +790,12 @@
     color: #212121;
 }
 
+.popup_page .popup_area .popup_txt_area .popup_sub_txt_zone .txt_detail {
+    margin-left: 0px;
+    width: 420px;
+    line-height: 1.75;
+}
+
 .popup_page .popup_area .popup_txt_area .popup_bot_txt_zone {
     margin-top: 81px;
     margin-left: 664px;
