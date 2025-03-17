@@ -191,7 +191,7 @@ function setInitSetting() {
     $(".cate_02").hide();
     $(".cate_03").hide();
 
-    m_curr_playing = new Audio(m_header.touch_sound);
+    
 
     setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
@@ -781,8 +781,17 @@ function setSoundPlay() {
     if (m_curr_playing) {
         m_curr_playing.pause(); // 이전 오디오 중지
         m_curr_playing.currentTime = 0; // Reset time
+    }else{
+        m_curr_playing = new Audio(m_header.touch_sound);
     }
+    
+    
+    //const audio = new Audio(m_header.bgm_sound);
+    //m_curr_playing.volume = 1;
     m_curr_playing.play();
+    
+    
+    //m_curr_playing.play();
     /*
     setTimeout(function () {
         m_curr_playing.play();
