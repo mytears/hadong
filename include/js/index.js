@@ -228,6 +228,18 @@ function setMainReset() {
     setPage("00");
 }
 
+function getContents(_cate, _num) {
+    let t_list = m_contents_list[_cate];
+    let t_obj = null;
+    for(var i=0;i<t_list.length;i+=1){
+        if(_num == t_list[i].code){
+            t_obj = t_list[i];
+            break;            
+        }
+    }
+    return t_obj;
+}
+
 function setShowPopup(_cate, _num) {
     console.log("setShowPopup", _cate, _num);
     m_clickable = true;
@@ -243,8 +255,11 @@ function setShowPopup(_cate, _num) {
     $(".popup_bot_txt_zone").hide();
 
 
-    let t_contents = m_contents_list[_cate][_num];
-
+    let t_contents = getContents(_cate, _num);
+    //let t_contents = m_contents_list[_cate][_num];
+    if(t_contents==null){
+        return;
+    }
     $(".txt_title").html(convStr(t_contents.name));
     $(".txt_desc").html(convStr(t_contents.desc));
     $(".txt_address").html(convStr(t_contents.address));
