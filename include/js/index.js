@@ -77,9 +77,9 @@ function setInit() {
         setTouchSoundPlay();
     });
     
-//    $("video").on("play pause ended seeked seeking volumechange ratechange loadeddata canplay canplaythrough waiting stalled error", function (event) {
-//        console.log(`이벤트 발생: ${event.type}`, this);
-//    });
+    $("video").on("play pause ended seeked seeking volumechange ratechange loadeddata canplay canplaythrough waiting stalled error", function (event) {
+        console.log(`이벤트 발생: ${event.type}`, this);
+    });
 
     m_time_last = new Date().getTime();
     setInterval(setMainInterval, 1000);
