@@ -21,6 +21,7 @@ let m_curr_page = "";
 let m_clickable = true;
 let m_curr_playing = null;
 let m_sound_volume = 1.0;
+let m_bgm_check = true;
 
 let m_qr_code = null;
 
@@ -76,9 +77,9 @@ function setInit() {
         setTouched();
         setTouchSoundPlay();
     });
-    
+
     $("video").on("play pause ended seeked seeking volumechange ratechange loadeddata canplay canplaythrough waiting stalled error", function (event) {
-        console.log(`이벤트 발생: ${event.type}`, this);
+        //console.log(`이벤트 발생: ${event.type}`, this);
     });
 
     m_time_last = new Date().getTime();
@@ -172,6 +173,8 @@ function setHideCover() {
 
 //초기화
 function setInitSetting() {
+    m_bg_mov_mode = m_header.bg_mov_mode;
+
     setBgmPlay();
 
     m_qr_code = new QRCode(document.getElementById("id_qr"), {
@@ -195,7 +198,7 @@ function setInitSetting() {
     $(".cate_02").hide();
     $(".cate_03").hide();
 
-    
+
 
     setTimeout(setHideCover, 500);
     //m_curr_page = ".page_00";
@@ -231,10 +234,10 @@ function setMainReset() {
 function getContents(_cate, _num) {
     let t_list = m_contents_list[_cate];
     let t_obj = null;
-    for(var i=0;i<t_list.length;i+=1){
-        if(_num == t_list[i].code){
+    for (var i = 0; i < t_list.length; i += 1) {
+        if (_num == t_list[i].code) {
             t_obj = t_list[i];
-            break;            
+            break;
         }
     }
     return t_obj;
@@ -257,7 +260,7 @@ function setShowPopup(_cate, _num) {
 
     let t_contents = getContents(_cate, _num);
     //let t_contents = m_contents_list[_cate][_num];
-    if(t_contents==null){
+    if (t_contents == null) {
         return;
     }
     $(".txt_title").html(convStr(t_contents.name));
@@ -277,8 +280,8 @@ function setShowPopup(_cate, _num) {
     }
 
     if (t_contents.detail != null && t_contents.detail != "null" && t_contents.detail != "") {
-            $(".sub_area_1").hide();
-            $(".sub_area_2").hide();
+        $(".sub_area_1").hide();
+        $(".sub_area_2").hide();
         $(".sub_area_3").show();
     } else {
         $(".sub_area_3").hide();
@@ -340,9 +343,8 @@ function onClickPrevBtn(_obj) {
         m_clickable = true;
         return;
     }
-    console.log(m_sub);
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    console.log("<<<", m_cate, m_sub);
+    console.log("<<onClickPrevBtn", m_cate, m_sub);
 
     let t_top = 0;
     let t_left = 0;
@@ -401,7 +403,7 @@ function onClickNextBtn(_obj) {
         return;
     }
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
-    console.log(">>>", m_cate, m_sub);
+    console.log(">>onClickNextBtn", m_cate, m_sub);
 
     let t_top = 0;
     let t_left = 0;
@@ -440,7 +442,7 @@ function onClickNextBtn(_obj) {
 }
 
 function setPrevNextBtnState(t_sub, t_max) {
-    console.log(t_sub, t_max);
+    //console.log("setPrevNextBtnState", t_sub, t_max);
     if (t_sub == 0) {
         $(".prev_btn").addClass("disabled");
     } else {
@@ -600,7 +602,7 @@ function onClickCup(_obj) {
 }
 
 function onClickMainMenu(_obj) {
-    console.log("m_clickable", m_clickable);
+    //console.log("m_clickable", m_clickable);
     if (m_clickable == false) {
         return;
     }
@@ -726,11 +728,9 @@ function setCate(_code) {
 }
 
 function setSubPage(_num) {
-    console.log("setSubPage", _num);
     let t_hide = ".cate_0" + m_cate + " .sub_0" + m_sub;
     let t_show = ".cate_0" + m_cate + " .sub_0" + _num;
-    console.log(t_hide);
-    console.log(t_show);
+    console.log("setSubPage", _num, t_show, t_hide);
     $(t_show).css("z-index", "100");
     $(t_show).fadeIn(1000);
     //console.log(t_show + " .page_bg");
@@ -751,7 +751,17 @@ function setSubPage(_num) {
 }
 
 function setSwap(_hide, _show) {
+    //m_bg_mov_mode
+    //console.log("setSwap", _show, _hide);
     m_curr_page = _show;
+    console.log("active video >>>>> " + $(m_curr_page + " video").attr("id"));
+
+    if ($(m_curr_page + " video")[0].paused || $(m_curr_page + " video")[0].ended) {
+        $(m_curr_page + " video")[0].play();
+        console.log("video restart");
+    }
+    //console.log($(m_curr_page+" video")[0].paused);
+    //console.log($(m_curr_page+" video")[0].ended);
     $(_show).css("z-index", "100");
     $(_show).fadeIn(1000);
     if ($(_show + " .page_bg").length > 0) {
@@ -781,13 +791,25 @@ function setHide(_hide) {
 }
 
 function setBgmPlay() {
-    const audio = new Audio(m_header.bgm_sound);
-    audio.volume = m_header.bgm_volume;
-    audio.loop = true; // 무한 반복 설정
-    audio.play();
+    try {
+        const audio = new Audio(m_header.bgm_sound);
+        audio.volume = m_header.bgm_volume;
+        audio.loop = true; // 무한 반복 설정
+        audio.play().catch(error => {
+            m_bgm_check = false;
+            console.warn("자동 재생이 차단되었습니다. 사용자 상호작용 후 다시 시도하세요.");
+        });
+    } catch (error) {
+        console.error("오디오 재생 오류:", error);
+    }
 }
 
 function setSoundPlay() {
+
+    if (m_bgm_check == false) {
+        m_bgm_check = true;
+        setBgmPlay();
+    }
     //console.log(_sound);
     /*
     if (m_curr_playing) {
@@ -800,16 +822,16 @@ function setSoundPlay() {
     if (m_curr_playing) {
         m_curr_playing.pause(); // 이전 오디오 중지
         m_curr_playing.currentTime = 0; // Reset time
-    }else{
+    } else {
         m_curr_playing = new Audio(m_header.touch_sound);
     }
-    
-    
+
+
     //const audio = new Audio(m_header.bgm_sound);
     //m_curr_playing.volume = 1;
     m_curr_playing.play();
-    
-    
+
+
     //m_curr_playing.play();
     /*
     setTimeout(function () {
