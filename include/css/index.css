@@ -792,7 +792,7 @@
 
 .popup_page .popup_area .popup_txt_area .popup_sub_txt_zone .txt_detail {
     margin-left: 0px;
-    width: 420px;
+    width: 421px;
     line-height: 1.75;
 }
 
@@ -844,6 +844,16 @@
     object-fit: fill;
     border: 7px solid #375D34;
     box-sizing: border-box;
+}
+
+.popup_page .popup_area .popup_img_area .txt_temp {
+    position: absolute;
+    top: 525px;
+    left: 890px;
+    width: 140px;
+    text-align: center;
+    color: #375D34;
+    font-weight: 600;
 }
 
 .popup_page .popup_area .popup_img_area .qr_img {

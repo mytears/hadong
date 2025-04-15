@@ -187,8 +187,8 @@ function setInitSetting() {
     });
     setAlignWavePos();
 
-    //$("#id_over_0").hide();
-    //$("#id_over_1").hide();
+    $("#id_over_0").hide();
+    $("#id_over_1").hide();
 
     $(".popup_page").hide();
     $(".page_20").hide();
@@ -256,6 +256,7 @@ function setShowPopup(_cate, _num) {
     //$(".img_2").attr("src", "");
     $(".qr").hide();
     $(".popup_bot_txt_zone").hide();
+    $(".txt_temp").hide();
 
 
     let t_contents = getContents(_cate, _num);
@@ -277,6 +278,11 @@ function setShowPopup(_cate, _num) {
         m_qr_code.makeCode(t_contents.qr_img_url);
         $(".qr").show();
         $(".popup_bot_txt_zone").show();
+    }
+
+    if (t_contents.temp_val != "null") {
+        $(".txt_temp").html(t_contents.temp_val);
+        $(".txt_temp").show();
     }
 
     if (t_contents.detail != null && t_contents.detail != "null" && t_contents.detail != "") {
@@ -672,8 +678,8 @@ function setPage(_code) {
 function setCate(_code) {
     console.log("setCate", _code);
     let t_show = "";
-    //$("#id_over_0").hide();
-    //$("#id_over_1").hide();
+    $("#id_over_0").hide();
+    $("#id_over_1").hide();
 
     $(".cate_page").hide();
     $(".sub_page").hide();
@@ -688,19 +694,22 @@ function setCate(_code) {
     switch (_code) {
         case "20":
             //$("#id_over_0").show();
+            $("#id_over_1").show();
             t_show = ".cate_00";
             break;
         case "21":
             //$("#id_over_0").show();
+            $("#id_over_1").show();
             t_show = ".cate_01";
             break;
         case "22":
             //$("#id_over_0").show();
-            //$("#id_over_1").show();
+            $("#id_over_1").show();
             t_show = ".cate_02";
             break;
         case "23":
             //$("#id_over_0").show();
+            $("#id_over_1").show();
             t_show = ".cate_03";
             break;
     }
