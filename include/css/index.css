@@ -275,6 +275,7 @@
     top: 595px;
     left: 1375px;
     z-index: 300;
+    pointer-events: none;
 }
 
 
@@ -324,6 +325,7 @@
     margin-top: 45px;
     margin-left: 13px;
     display: flex;
+    pointer-events:all;
 }
 
 .page_20 .sub_menu_box .sub_btn.disabled {
@@ -401,6 +403,7 @@
     height: 320px;
 /*    border: 3px solid #000000;*/
     opacity: 0.3;
+    z-index: 100;
 }
 
 .cate_page {
