@@ -806,9 +806,12 @@ function setBgmPlay() {
         audio.loop = true; // 무한 반복 설정
         audio.play().catch(error => {
             m_bgm_check = false;
+			setCallWebToApp("SETLOG","자동 재생이 차단되었습니다. 사용자 상호작용 후 다시 시도하세요.");
             console.warn("자동 재생이 차단되었습니다. 사용자 상호작용 후 다시 시도하세요.");
         });
+		setCallWebToApp("SETLOG","브금 재생 시작.");
     } catch (error) {
+		setCallWebToApp("SETLOG","오디오 재생 오류:", error);
         console.error("오디오 재생 오류:", error);
     }
 }
